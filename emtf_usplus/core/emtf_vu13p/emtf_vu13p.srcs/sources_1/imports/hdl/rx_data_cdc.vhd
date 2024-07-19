@@ -33,7 +33,7 @@ end entity;
 
 architecture RTL of rx_data_cdc is
 
-  component bram_rx_buffer
+  component bram_rx_buffer_1
     port(
       clka  : in  std_logic;
       wea   : in  std_logic_vector(0 downto 0);
@@ -95,7 +95,7 @@ begin
   bram_in_data(71 downto 68) <= crc_wr_frn;
 
 ---- Simple DUAL Port RAM RX cdc buffer
-  rx_buffer : bram_rx_buffer
+  rx_buffer : bram_rx_buffer_1
     port map (
       clka   => rxusrclk,
       wea(0) => wr_en_in,
