@@ -1,0 +1,116 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 10/31/2017 02:34:06 PM
+// Design Name: 
+// Module Name: emtf_control_bm
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module emtf_control_bm
+(
+    output [1:0] pci_exp_txp,
+    output [1:0] pci_exp_txn,
+    input  [1:0] pci_exp_rxp,
+    input  [1:0] pci_exp_rxn,
+    input sys_clk_p,
+    input sys_clk_n
+
+ );
+    wire sys_rst_n = 1'b1;
+
+	xilinx_pcie_2_1_ep_7x pcie_
+	(
+	    .pci_exp_txp (pci_exp_txp),
+	    .pci_exp_txn (pci_exp_txn),
+	    .pci_exp_rxp (pci_exp_rxp),
+	    .pci_exp_rxn (pci_exp_rxn),
+	    .sys_clk_p   (sys_clk_p  ),
+	    .sys_clk_n   (sys_clk_n  ),
+	    .sys_rst_n   (sys_rst_n  )
+	 );
+
+	parameter BAR0 = 32'hFF000000; // 16M aperture for memory access, should be write-combining
+	parameter BAR1 = 32'hFFFFFC00; // 
+
+	wire [31:0] rd_addr = pcie_.app.PIO.PIO_EP_inst.rd_addr;
+    wire [63:0] rd_data;
+	assign pcie_.app.PIO.PIO_EP_inst.rd_data = rd_data;
+	wire        rd_en = pcie_.app.PIO.PIO_EP_inst.rd_en;
+
+    wire [31:0] wr_addr = pcie_.app.PIO.PIO_EP_inst.wr_addr;
+    wire [63:0] wr_data = pcie_.app.PIO.PIO_EP_inst.wr_data;
+    wire        wr_en = pcie_.app.PIO.PIO_EP_inst.wr_en;
+	wire        bar_hit = pcie_.app.PIO.PIO_EP_inst.bar_hit; // shows which BAR is hit
+	wire        wr_addr_valid = pcie_.app.PIO.PIO_EP_inst.wr_addr_valid; // address strobe
+
+	wire        beam; 
+	assign pcie_.app.PIO.PIO_EP_inst.beam = beam;
+	wire [31:0] beam_addr;
+	assign pcie_.app.PIO.PIO_EP_inst.beam_addr = beam_addr;
+	wire [63:0] beam_data;
+	assign pcie_.app.PIO.PIO_EP_inst.beam_data = beam_data;
+	wire [31:0] beam_cnt;
+	assign pcie_.app.PIO.PIO_EP_inst.beam_cnt = beam_cnt;
+	wire        beaming_in_progress = pcie_.app.PIO.PIO_EP_inst.beaming_in_progress;
+	wire        beam_prep;
+	assign pcie_.app.PIO.PIO_EP_inst.beam_prep = beam_prep;
+
+    pcie_loopback #
+	(
+		 .BAR0(BAR0), .BAR1(BAR1),
+		 .REG_OFF(32'h0), .MEM_OFF(32'h0)
+	) lb
+    (
+
+         .clk(clk),
+		 .rst_n(rst_n),
+		 
+         // read port
+		 .rd_addr_i(rd_addr),
+		 .rd_data_o(rd_data),
+		 .rd_en_i (rd_en),
+
+         // write port
+		 .bar_hit(bar_hit),
+         .wr_addr_i(wr_addr),
+		 .wr_addr_valid (wr_addr_valid),
+         .wr_data_i(wr_data),
+		 .wr_en_i(wr_en),
+
+		 // beam port
+         .beam(beam),
+         .beam_addr_o(beam_addr),
+         .beam_data_o (beam_data),
+         .beam_cnt_o(beam_cnt),
+         .beaming_in_progress(beaming_in_progress),
+	     .beam_prep (beam_prep),
+         .busy(busy)
+		 
+//		 .lhc_cnt (lhc_cnt),
+//		 .pll_cnt (pll_cnt),
+//		 .bc0_period (bc0_period),
+//		 .resync_cnt (resync_cnt),
+//		 .l1a_internal (l1a_internal),
+		 
+		 // clock module interface
+//		 .clk_word (clk_word),
+//		 .clk_status ({s_los, s_hold, s_lock})
+    );
+
+
+
+endmodule

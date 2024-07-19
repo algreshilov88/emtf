@@ -1,0 +1,129 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x6A8FDBAF4689AB7C",
+      "design_src": "SBD",
+      "device": "xc7vx690tffg1927-2",
+      "name": "bd_54be",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "scoped": "true",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.1.1_AR73018",
+      "validated": "true"
+    },
+    "design_tree": {
+      "bsip": "",
+      "bs_switch_0": ""
+    },
+    "interface_ports": {
+      "m0_bscan": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:interface:bscan_rtl:1.0"
+      }
+    },
+    "ports": {
+      "jtag_tdi": {
+        "direction": "I"
+      },
+      "jtag_tdo": {
+        "direction": "O"
+      },
+      "jtag_tms": {
+        "direction": "I"
+      },
+      "jtag_tck": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "bsip": {
+        "vlnv": "xilinx.com:ip:bsip:1.1",
+        "xci_name": "bd_54be_bsip_0",
+        "parameters": {
+          "C_CHIP_ID": {
+            "value": "0"
+          },
+          "C_DEVICE_FAMILY": {
+            "value": "0"
+          },
+          "C_EN_MUX": {
+            "value": "0"
+          },
+          "C_EN_MUX_EXT_BS": {
+            "value": "0"
+          },
+          "C_IR_ID_INSTR": {
+            "value": "0"
+          },
+          "C_IR_USER1_INSTR": {
+            "value": "0"
+          },
+          "C_IR_WIDTH": {
+            "value": "0"
+          },
+          "C_USER_SCAN_CHAIN": {
+            "value": "1"
+          },
+          "C_USE_SOFTBSCAN": {
+            "value": "1"
+          }
+        }
+      },
+      "bs_switch_0": {
+        "vlnv": "xilinx.com:ip:bs_switch:1.0",
+        "xci_name": "bd_54be_bs_switch_0_0",
+        "parameters": {
+          "C_NUM_BS_MASTER": {
+            "value": "1"
+          },
+          "C_USER_SCAN_CHAIN": {
+            "value": "1"
+          },
+          "C_USE_EXT_BSCAN": {
+            "value": "true"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "bsip_m_bscan": {
+        "interface_ports": [
+          "bsip/m_bscan",
+          "bs_switch_0/s_bscan"
+        ]
+      },
+      "bs_switch_0_m0_bscan": {
+        "interface_ports": [
+          "m0_bscan",
+          "bs_switch_0/m0_bscan"
+        ]
+      }
+    },
+    "nets": {
+      "jtag_tdi_1": {
+        "ports": [
+          "jtag_tdi",
+          "bsip/tap_tdi"
+        ]
+      },
+      "bsip_tap_tdo": {
+        "ports": [
+          "bsip/tap_tdo",
+          "jtag_tdo"
+        ]
+      },
+      "jtag_tck_1": {
+        "ports": [
+          "jtag_tck",
+          "bsip/tap_tck"
+        ]
+      },
+      "jtag_tms_1": {
+        "ports": [
+          "jtag_tms",
+          "bsip/tap_tms"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+set_property LOC H12 [get_ports k_rx_clk] ;# CNT<11>
+
+set_property LOC B11 [get_ports k_rxdata[0]] ;# CNT<40>
+set_property LOC B14 [get_ports k_rxdata[1]] ;# CNT<41>
+set_property LOC A14 [get_ports k_rxdata[2]] ;# CNT<42>
+set_property LOC B10 [get_ports k_rxdata[3]] ;# CNT<43>
+set_property LOC A10 [get_ports k_rxdata[4]] ;# CNT<44>
+set_property LOC B15 [get_ports k_rxdata[5]] ;# CNT<45>
+set_property LOC A15 [get_ports k_rxdata[6]] ;# CNT<46>
+set_property LOC A13 [get_ports k_rxdata[7]] ;# CNT<47>
+set_property LOC A12 [get_ports k_rxdata[8]] ;# CNT<48>
+set_property LOC J14 [get_ports k_rxdata[9]] ;# CNT<49>
+set_property LOC N16 [get_ports k_rxdata[10]] ;# CNT<50>
+set_property LOC K25 [get_ports k_rxdata[11]] ;# CNT<51>
+set_property LOC K26 [get_ports k_rxdata[12]] ;# CNT<52>
+set_property LOC R26 [get_ports k_rxdata[13]] ;# CNT<53>
+set_property LOC P26 [get_ports k_rxdata[14]] ;# CNT<54>
+set_property LOC M25 [get_ports k_rxdata[15]] ;# CNT<55>
+set_property LOC L25 [get_ports k_rxcharisk[0]] ;# CNT<56>
+set_property LOC P24 [get_ports k_rxcharisk[1]] ;# CNT<57>
+set_property LOC N24 [get_ports k_rxchariscomma[0]] ;# CNT<58>
+set_property LOC N26 [get_ports k_rxchariscomma[1]] ;# CNT<59>
+set_property LOC M26 [get_ports k_rxnotintable[0]] ;# CNT<60>
+set_property LOC R25 [get_ports k_rxnotintable[1]] ;# CNT<61>
+set_property LOC P25 [get_ports k_rxresetdone] ;# CNT<62>
+
+set_property IOSTANDARD LVCMOS12 [get_ports k_rx*] ;
+
+set_property IOB TRUE [get_ports k_rxdata[*]]
+set_property IOB TRUE [get_ports k_rxcharisk[*]]
+set_property IOB TRUE [get_ports k_rxchariscomma[*]]
+set_property IOB TRUE [get_ports k_rxnotintable[*]]
+set_property IOB TRUE [get_ports k_rxresetdone]
+

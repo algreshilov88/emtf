@@ -1,0 +1,2 @@
+disconnect_net -prune -objects [get_pins pcie_w/pcie_top_i/xdma_0/inst/pcie_top_xdma_0_1_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/pcie_top_i/pcie_7x_i/pcie_block_i/CFGPMFORCESTATEENN]
+connect_net -net   pcie_w/pcie_top_i/xdma_0/inst/pcie_top_xdma_0_1_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/pcie_top_i/pcie_7x_i/<const0> -objects [get_pins pcie_w/pcie_top_i/xdma_0/inst/pcie_top_xdma_0_1_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/pcie_top_i/pcie_7x_i/pcie_block_i/CFGPMFORCESTATEENN]

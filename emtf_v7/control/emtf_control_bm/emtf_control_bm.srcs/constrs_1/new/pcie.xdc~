@@ -1,0 +1,2 @@
+#-*-tcl-*-
+set_property PACKAGE_PIN D6 [get_ports sys_clk_p]

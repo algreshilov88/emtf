@@ -1,0 +1,228 @@
+#-*-tcl-*-
+
+
+connect_debug_port u_ila_0/probe19 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[0]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[1]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[2]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[3]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[4]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[5]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[6]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[7]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[8]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[9]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[10]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[11]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[12]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[13]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[14]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[15]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[16]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[17]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[18]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[19]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[20]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[21]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[22]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[23]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[24]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[25]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[26]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[27]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[28]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[29]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[30]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[31]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[32]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[33]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[34]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[35]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[36]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[37]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[38]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[39]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[40]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[41]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[42]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[43]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[44]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[45]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[46]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[47]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[48]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[49]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[50]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[51]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[52]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[53]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[54]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[55]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[56]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[57]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[58]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[59]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[60]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[61]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[62]} {pcie_/app/PIO/PIO_EP_inst/lb/beam_data_o[63]}]]
+connect_debug_port u_ila_0/probe20 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[0]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[1]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[2]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[3]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[4]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[5]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[6]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[7]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[8]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[9]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[10]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[11]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[12]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[13]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[14]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[15]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[16]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[17]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[18]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[19]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[20]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[21]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[22]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[23]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[24]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[25]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[26]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[27]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[28]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[29]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[30]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[31]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[32]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[33]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[34]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[35]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[36]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[37]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[38]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[39]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[40]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[41]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[42]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[43]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[44]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[45]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[46]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[47]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[48]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[49]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[50]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[51]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[52]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[53]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[54]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[55]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[56]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[57]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[58]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[59]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[60]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[61]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[62]} {pcie_/app/PIO/PIO_EP_inst/lb/lb_wr_data[63]}]]
+connect_debug_port u_ila_0/probe24 [get_nets [list pcie_/app/PIO/PIO_EP_inst/lb/beam]]
+connect_debug_port u_ila_0/probe29 [get_nets [list pcie_/app/PIO/PIO_EP_inst/lb/beaming_in_progress]]
+connect_debug_port u_ila_0/probe34 [get_nets [list pcie_/app/PIO/PIO_EP_inst/lb/loop_wr_en]]
+connect_debug_port u_ila_0/probe35 [get_nets [list pcie_/app/PIO/PIO_EP_inst/lb/loopback_beam]]
+
+create_debug_core u_ila_0 ila
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 6 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list pcie_/pcie_7x_0_support_i/pipe_clock_i/pipe_userclk2_out]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/beam_data[0]} {pcie_/app/PIO/PIO_EP_inst/beam_data[1]} {pcie_/app/PIO/PIO_EP_inst/beam_data[2]} {pcie_/app/PIO/PIO_EP_inst/beam_data[3]} {pcie_/app/PIO/PIO_EP_inst/beam_data[4]} {pcie_/app/PIO/PIO_EP_inst/beam_data[5]} {pcie_/app/PIO/PIO_EP_inst/beam_data[6]} {pcie_/app/PIO/PIO_EP_inst/beam_data[7]} {pcie_/app/PIO/PIO_EP_inst/beam_data[8]} {pcie_/app/PIO/PIO_EP_inst/beam_data[9]} {pcie_/app/PIO/PIO_EP_inst/beam_data[10]} {pcie_/app/PIO/PIO_EP_inst/beam_data[11]} {pcie_/app/PIO/PIO_EP_inst/beam_data[12]} {pcie_/app/PIO/PIO_EP_inst/beam_data[13]} {pcie_/app/PIO/PIO_EP_inst/beam_data[14]} {pcie_/app/PIO/PIO_EP_inst/beam_data[15]} {pcie_/app/PIO/PIO_EP_inst/beam_data[16]} {pcie_/app/PIO/PIO_EP_inst/beam_data[17]} {pcie_/app/PIO/PIO_EP_inst/beam_data[18]} {pcie_/app/PIO/PIO_EP_inst/beam_data[19]} {pcie_/app/PIO/PIO_EP_inst/beam_data[20]} {pcie_/app/PIO/PIO_EP_inst/beam_data[21]} {pcie_/app/PIO/PIO_EP_inst/beam_data[22]} {pcie_/app/PIO/PIO_EP_inst/beam_data[23]} {pcie_/app/PIO/PIO_EP_inst/beam_data[24]} {pcie_/app/PIO/PIO_EP_inst/beam_data[25]} {pcie_/app/PIO/PIO_EP_inst/beam_data[26]} {pcie_/app/PIO/PIO_EP_inst/beam_data[27]} {pcie_/app/PIO/PIO_EP_inst/beam_data[28]} {pcie_/app/PIO/PIO_EP_inst/beam_data[29]} {pcie_/app/PIO/PIO_EP_inst/beam_data[30]} {pcie_/app/PIO/PIO_EP_inst/beam_data[31]} {pcie_/app/PIO/PIO_EP_inst/beam_data[32]} {pcie_/app/PIO/PIO_EP_inst/beam_data[33]} {pcie_/app/PIO/PIO_EP_inst/beam_data[34]} {pcie_/app/PIO/PIO_EP_inst/beam_data[35]} {pcie_/app/PIO/PIO_EP_inst/beam_data[36]} {pcie_/app/PIO/PIO_EP_inst/beam_data[37]} {pcie_/app/PIO/PIO_EP_inst/beam_data[38]} {pcie_/app/PIO/PIO_EP_inst/beam_data[39]} {pcie_/app/PIO/PIO_EP_inst/beam_data[40]} {pcie_/app/PIO/PIO_EP_inst/beam_data[41]} {pcie_/app/PIO/PIO_EP_inst/beam_data[42]} {pcie_/app/PIO/PIO_EP_inst/beam_data[43]} {pcie_/app/PIO/PIO_EP_inst/beam_data[44]} {pcie_/app/PIO/PIO_EP_inst/beam_data[45]} {pcie_/app/PIO/PIO_EP_inst/beam_data[46]} {pcie_/app/PIO/PIO_EP_inst/beam_data[47]} {pcie_/app/PIO/PIO_EP_inst/beam_data[48]} {pcie_/app/PIO/PIO_EP_inst/beam_data[49]} {pcie_/app/PIO/PIO_EP_inst/beam_data[50]} {pcie_/app/PIO/PIO_EP_inst/beam_data[51]} {pcie_/app/PIO/PIO_EP_inst/beam_data[52]} {pcie_/app/PIO/PIO_EP_inst/beam_data[53]} {pcie_/app/PIO/PIO_EP_inst/beam_data[54]} {pcie_/app/PIO/PIO_EP_inst/beam_data[55]} {pcie_/app/PIO/PIO_EP_inst/beam_data[56]} {pcie_/app/PIO/PIO_EP_inst/beam_data[57]} {pcie_/app/PIO/PIO_EP_inst/beam_data[58]} {pcie_/app/PIO/PIO_EP_inst/beam_data[59]} {pcie_/app/PIO/PIO_EP_inst/beam_data[60]} {pcie_/app/PIO/PIO_EP_inst/beam_data[61]} {pcie_/app/PIO/PIO_EP_inst/beam_data[62]} {pcie_/app/PIO/PIO_EP_inst/beam_data[63]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+set_property port_width 32 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/beam_cnt[0]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[1]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[2]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[3]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[4]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[5]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[6]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[7]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[8]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[9]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[10]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[11]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[12]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[13]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[14]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[15]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[16]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[17]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[18]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[19]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[20]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[21]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[22]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[23]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[24]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[25]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[26]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[27]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[28]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[29]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[30]} {pcie_/app/PIO/PIO_EP_inst/beam_cnt[31]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+set_property port_width 64 [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[0]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[1]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[2]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[3]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[4]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[5]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[6]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[7]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[8]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[9]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[10]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[11]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[12]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[13]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[14]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[15]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[16]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[17]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[18]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[19]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[20]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[21]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[22]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[23]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[24]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[25]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[26]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[27]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[28]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[29]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[30]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[31]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[32]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[33]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[34]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[35]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[36]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[37]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[38]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[39]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[40]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[41]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[42]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[43]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[44]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[45]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[46]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[47]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[48]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[49]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[50]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[51]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[52]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[53]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[54]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[55]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[56]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[57]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[58]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[59]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[60]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[61]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[62]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tdata[63]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+set_property port_width 2 [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tkeep[0]} {pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tkeep[4]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+set_property port_width 10 [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/req_len[0]} {pcie_/app/PIO/PIO_EP_inst/req_len[1]} {pcie_/app/PIO/PIO_EP_inst/req_len[2]} {pcie_/app/PIO/PIO_EP_inst/req_len[3]} {pcie_/app/PIO/PIO_EP_inst/req_len[4]} {pcie_/app/PIO/PIO_EP_inst/req_len[5]} {pcie_/app/PIO/PIO_EP_inst/req_len[6]} {pcie_/app/PIO/PIO_EP_inst/req_len[7]} {pcie_/app/PIO/PIO_EP_inst/req_len[8]} {pcie_/app/PIO/PIO_EP_inst/req_len[9]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+set_property port_width 3 [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/req_tc[0]} {pcie_/app/PIO/PIO_EP_inst/req_tc[1]} {pcie_/app/PIO/PIO_EP_inst/req_tc[2]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+set_property port_width 32 [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/rd_addr[0]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[1]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[2]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[3]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[4]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[5]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[6]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[7]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[8]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[9]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[10]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[11]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[12]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[13]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[14]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[15]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[16]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[17]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[18]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[19]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[20]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[21]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[22]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[23]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[24]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[25]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[26]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[27]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[28]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[29]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[30]} {pcie_/app/PIO/PIO_EP_inst/rd_addr[31]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+set_property port_width 8 [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/req_be[0]} {pcie_/app/PIO/PIO_EP_inst/req_be[1]} {pcie_/app/PIO/PIO_EP_inst/req_be[2]} {pcie_/app/PIO/PIO_EP_inst/req_be[3]} {pcie_/app/PIO/PIO_EP_inst/req_be[4]} {pcie_/app/PIO/PIO_EP_inst/req_be[5]} {pcie_/app/PIO/PIO_EP_inst/req_be[6]} {pcie_/app/PIO/PIO_EP_inst/req_be[7]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
+set_property port_width 8 [get_debug_ports u_ila_0/probe8]
+connect_debug_port u_ila_0/probe8 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/wr_be[0]} {pcie_/app/PIO/PIO_EP_inst/wr_be[1]} {pcie_/app/PIO/PIO_EP_inst/wr_be[2]} {pcie_/app/PIO/PIO_EP_inst/wr_be[3]} {pcie_/app/PIO/PIO_EP_inst/wr_be[4]} {pcie_/app/PIO/PIO_EP_inst/wr_be[5]} {pcie_/app/PIO/PIO_EP_inst/wr_be[6]} {pcie_/app/PIO/PIO_EP_inst/wr_be[7]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
+set_property port_width 16 [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/req_rid[0]} {pcie_/app/PIO/PIO_EP_inst/req_rid[1]} {pcie_/app/PIO/PIO_EP_inst/req_rid[2]} {pcie_/app/PIO/PIO_EP_inst/req_rid[3]} {pcie_/app/PIO/PIO_EP_inst/req_rid[4]} {pcie_/app/PIO/PIO_EP_inst/req_rid[5]} {pcie_/app/PIO/PIO_EP_inst/req_rid[6]} {pcie_/app/PIO/PIO_EP_inst/req_rid[7]} {pcie_/app/PIO/PIO_EP_inst/req_rid[8]} {pcie_/app/PIO/PIO_EP_inst/req_rid[9]} {pcie_/app/PIO/PIO_EP_inst/req_rid[10]} {pcie_/app/PIO/PIO_EP_inst/req_rid[11]} {pcie_/app/PIO/PIO_EP_inst/req_rid[12]} {pcie_/app/PIO/PIO_EP_inst/req_rid[13]} {pcie_/app/PIO/PIO_EP_inst/req_rid[14]} {pcie_/app/PIO/PIO_EP_inst/req_rid[15]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
+set_property port_width 32 [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/wr_addr[0]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[1]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[2]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[3]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[4]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[5]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[6]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[7]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[8]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[9]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[10]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[11]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[12]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[13]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[14]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[15]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[16]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[17]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[18]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[19]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[20]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[21]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[22]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[23]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[24]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[25]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[26]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[27]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[28]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[29]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[30]} {pcie_/app/PIO/PIO_EP_inst/wr_addr[31]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe11]
+set_property port_width 8 [get_debug_ports u_ila_0/probe11]
+connect_debug_port u_ila_0/probe11 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/req_tag[0]} {pcie_/app/PIO/PIO_EP_inst/req_tag[1]} {pcie_/app/PIO/PIO_EP_inst/req_tag[2]} {pcie_/app/PIO/PIO_EP_inst/req_tag[3]} {pcie_/app/PIO/PIO_EP_inst/req_tag[4]} {pcie_/app/PIO/PIO_EP_inst/req_tag[5]} {pcie_/app/PIO/PIO_EP_inst/req_tag[6]} {pcie_/app/PIO/PIO_EP_inst/req_tag[7]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe12]
+set_property port_width 4 [get_debug_ports u_ila_0/probe12]
+connect_debug_port u_ila_0/probe12 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/rd_be[0]} {pcie_/app/PIO/PIO_EP_inst/rd_be[1]} {pcie_/app/PIO/PIO_EP_inst/rd_be[2]} {pcie_/app/PIO/PIO_EP_inst/rd_be[3]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe13]
+set_property port_width 64 [get_debug_ports u_ila_0/probe13]
+connect_debug_port u_ila_0/probe13 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[0]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[1]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[2]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[3]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[4]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[5]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[6]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[7]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[8]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[9]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[10]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[11]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[12]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[13]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[14]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[15]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[16]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[17]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[18]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[19]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[20]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[21]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[22]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[23]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[24]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[25]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[26]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[27]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[28]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[29]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[30]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[31]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[32]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[33]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[34]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[35]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[36]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[37]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[38]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[39]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[40]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[41]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[42]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[43]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[44]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[45]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[46]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[47]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[48]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[49]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[50]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[51]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[52]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[53]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[54]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[55]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[56]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[57]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[58]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[59]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[60]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[61]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[62]} {pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tdata[63]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe14]
+set_property port_width 64 [get_debug_ports u_ila_0/probe14]
+connect_debug_port u_ila_0/probe14 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/rd_data[0]} {pcie_/app/PIO/PIO_EP_inst/rd_data[1]} {pcie_/app/PIO/PIO_EP_inst/rd_data[2]} {pcie_/app/PIO/PIO_EP_inst/rd_data[3]} {pcie_/app/PIO/PIO_EP_inst/rd_data[4]} {pcie_/app/PIO/PIO_EP_inst/rd_data[5]} {pcie_/app/PIO/PIO_EP_inst/rd_data[6]} {pcie_/app/PIO/PIO_EP_inst/rd_data[7]} {pcie_/app/PIO/PIO_EP_inst/rd_data[8]} {pcie_/app/PIO/PIO_EP_inst/rd_data[9]} {pcie_/app/PIO/PIO_EP_inst/rd_data[10]} {pcie_/app/PIO/PIO_EP_inst/rd_data[11]} {pcie_/app/PIO/PIO_EP_inst/rd_data[12]} {pcie_/app/PIO/PIO_EP_inst/rd_data[13]} {pcie_/app/PIO/PIO_EP_inst/rd_data[14]} {pcie_/app/PIO/PIO_EP_inst/rd_data[15]} {pcie_/app/PIO/PIO_EP_inst/rd_data[16]} {pcie_/app/PIO/PIO_EP_inst/rd_data[17]} {pcie_/app/PIO/PIO_EP_inst/rd_data[18]} {pcie_/app/PIO/PIO_EP_inst/rd_data[19]} {pcie_/app/PIO/PIO_EP_inst/rd_data[20]} {pcie_/app/PIO/PIO_EP_inst/rd_data[21]} {pcie_/app/PIO/PIO_EP_inst/rd_data[22]} {pcie_/app/PIO/PIO_EP_inst/rd_data[23]} {pcie_/app/PIO/PIO_EP_inst/rd_data[24]} {pcie_/app/PIO/PIO_EP_inst/rd_data[25]} {pcie_/app/PIO/PIO_EP_inst/rd_data[26]} {pcie_/app/PIO/PIO_EP_inst/rd_data[27]} {pcie_/app/PIO/PIO_EP_inst/rd_data[28]} {pcie_/app/PIO/PIO_EP_inst/rd_data[29]} {pcie_/app/PIO/PIO_EP_inst/rd_data[30]} {pcie_/app/PIO/PIO_EP_inst/rd_data[31]} {pcie_/app/PIO/PIO_EP_inst/rd_data[32]} {pcie_/app/PIO/PIO_EP_inst/rd_data[33]} {pcie_/app/PIO/PIO_EP_inst/rd_data[34]} {pcie_/app/PIO/PIO_EP_inst/rd_data[35]} {pcie_/app/PIO/PIO_EP_inst/rd_data[36]} {pcie_/app/PIO/PIO_EP_inst/rd_data[37]} {pcie_/app/PIO/PIO_EP_inst/rd_data[38]} {pcie_/app/PIO/PIO_EP_inst/rd_data[39]} {pcie_/app/PIO/PIO_EP_inst/rd_data[40]} {pcie_/app/PIO/PIO_EP_inst/rd_data[41]} {pcie_/app/PIO/PIO_EP_inst/rd_data[42]} {pcie_/app/PIO/PIO_EP_inst/rd_data[43]} {pcie_/app/PIO/PIO_EP_inst/rd_data[44]} {pcie_/app/PIO/PIO_EP_inst/rd_data[45]} {pcie_/app/PIO/PIO_EP_inst/rd_data[46]} {pcie_/app/PIO/PIO_EP_inst/rd_data[47]} {pcie_/app/PIO/PIO_EP_inst/rd_data[48]} {pcie_/app/PIO/PIO_EP_inst/rd_data[49]} {pcie_/app/PIO/PIO_EP_inst/rd_data[50]} {pcie_/app/PIO/PIO_EP_inst/rd_data[51]} {pcie_/app/PIO/PIO_EP_inst/rd_data[52]} {pcie_/app/PIO/PIO_EP_inst/rd_data[53]} {pcie_/app/PIO/PIO_EP_inst/rd_data[54]} {pcie_/app/PIO/PIO_EP_inst/rd_data[55]} {pcie_/app/PIO/PIO_EP_inst/rd_data[56]} {pcie_/app/PIO/PIO_EP_inst/rd_data[57]} {pcie_/app/PIO/PIO_EP_inst/rd_data[58]} {pcie_/app/PIO/PIO_EP_inst/rd_data[59]} {pcie_/app/PIO/PIO_EP_inst/rd_data[60]} {pcie_/app/PIO/PIO_EP_inst/rd_data[61]} {pcie_/app/PIO/PIO_EP_inst/rd_data[62]} {pcie_/app/PIO/PIO_EP_inst/rd_data[63]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe15]
+set_property port_width 64 [get_debug_ports u_ila_0/probe15]
+connect_debug_port u_ila_0/probe15 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/wr_data[0]} {pcie_/app/PIO/PIO_EP_inst/wr_data[1]} {pcie_/app/PIO/PIO_EP_inst/wr_data[2]} {pcie_/app/PIO/PIO_EP_inst/wr_data[3]} {pcie_/app/PIO/PIO_EP_inst/wr_data[4]} {pcie_/app/PIO/PIO_EP_inst/wr_data[5]} {pcie_/app/PIO/PIO_EP_inst/wr_data[6]} {pcie_/app/PIO/PIO_EP_inst/wr_data[7]} {pcie_/app/PIO/PIO_EP_inst/wr_data[8]} {pcie_/app/PIO/PIO_EP_inst/wr_data[9]} {pcie_/app/PIO/PIO_EP_inst/wr_data[10]} {pcie_/app/PIO/PIO_EP_inst/wr_data[11]} {pcie_/app/PIO/PIO_EP_inst/wr_data[12]} {pcie_/app/PIO/PIO_EP_inst/wr_data[13]} {pcie_/app/PIO/PIO_EP_inst/wr_data[14]} {pcie_/app/PIO/PIO_EP_inst/wr_data[15]} {pcie_/app/PIO/PIO_EP_inst/wr_data[16]} {pcie_/app/PIO/PIO_EP_inst/wr_data[17]} {pcie_/app/PIO/PIO_EP_inst/wr_data[18]} {pcie_/app/PIO/PIO_EP_inst/wr_data[19]} {pcie_/app/PIO/PIO_EP_inst/wr_data[20]} {pcie_/app/PIO/PIO_EP_inst/wr_data[21]} {pcie_/app/PIO/PIO_EP_inst/wr_data[22]} {pcie_/app/PIO/PIO_EP_inst/wr_data[23]} {pcie_/app/PIO/PIO_EP_inst/wr_data[24]} {pcie_/app/PIO/PIO_EP_inst/wr_data[25]} {pcie_/app/PIO/PIO_EP_inst/wr_data[26]} {pcie_/app/PIO/PIO_EP_inst/wr_data[27]} {pcie_/app/PIO/PIO_EP_inst/wr_data[28]} {pcie_/app/PIO/PIO_EP_inst/wr_data[29]} {pcie_/app/PIO/PIO_EP_inst/wr_data[30]} {pcie_/app/PIO/PIO_EP_inst/wr_data[31]} {pcie_/app/PIO/PIO_EP_inst/wr_data[32]} {pcie_/app/PIO/PIO_EP_inst/wr_data[33]} {pcie_/app/PIO/PIO_EP_inst/wr_data[34]} {pcie_/app/PIO/PIO_EP_inst/wr_data[35]} {pcie_/app/PIO/PIO_EP_inst/wr_data[36]} {pcie_/app/PIO/PIO_EP_inst/wr_data[37]} {pcie_/app/PIO/PIO_EP_inst/wr_data[38]} {pcie_/app/PIO/PIO_EP_inst/wr_data[39]} {pcie_/app/PIO/PIO_EP_inst/wr_data[40]} {pcie_/app/PIO/PIO_EP_inst/wr_data[41]} {pcie_/app/PIO/PIO_EP_inst/wr_data[42]} {pcie_/app/PIO/PIO_EP_inst/wr_data[43]} {pcie_/app/PIO/PIO_EP_inst/wr_data[44]} {pcie_/app/PIO/PIO_EP_inst/wr_data[45]} {pcie_/app/PIO/PIO_EP_inst/wr_data[46]} {pcie_/app/PIO/PIO_EP_inst/wr_data[47]} {pcie_/app/PIO/PIO_EP_inst/wr_data[48]} {pcie_/app/PIO/PIO_EP_inst/wr_data[49]} {pcie_/app/PIO/PIO_EP_inst/wr_data[50]} {pcie_/app/PIO/PIO_EP_inst/wr_data[51]} {pcie_/app/PIO/PIO_EP_inst/wr_data[52]} {pcie_/app/PIO/PIO_EP_inst/wr_data[53]} {pcie_/app/PIO/PIO_EP_inst/wr_data[54]} {pcie_/app/PIO/PIO_EP_inst/wr_data[55]} {pcie_/app/PIO/PIO_EP_inst/wr_data[56]} {pcie_/app/PIO/PIO_EP_inst/wr_data[57]} {pcie_/app/PIO/PIO_EP_inst/wr_data[58]} {pcie_/app/PIO/PIO_EP_inst/wr_data[59]} {pcie_/app/PIO/PIO_EP_inst/wr_data[60]} {pcie_/app/PIO/PIO_EP_inst/wr_data[61]} {pcie_/app/PIO/PIO_EP_inst/wr_data[62]} {pcie_/app/PIO/PIO_EP_inst/wr_data[63]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe16]
+set_property port_width 32 [get_debug_ports u_ila_0/probe16]
+connect_debug_port u_ila_0/probe16 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/beam_addr[0]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[1]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[2]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[3]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[4]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[5]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[6]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[7]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[8]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[9]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[10]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[11]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[12]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[13]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[14]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[15]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[16]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[17]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[18]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[19]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[20]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[21]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[22]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[23]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[24]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[25]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[26]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[27]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[28]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[29]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[30]} {pcie_/app/PIO/PIO_EP_inst/beam_addr[31]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe17]
+set_property port_width 2 [get_debug_ports u_ila_0/probe17]
+connect_debug_port u_ila_0/probe17 [get_nets [list {pcie_/app/PIO/PIO_EP_inst/req_attr[0]} {pcie_/app/PIO/PIO_EP_inst/req_attr[1]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe18]
+set_property port_width 64 [get_debug_ports u_ila_0/probe18]
+connect_debug_port u_ila_0/probe18 [get_nets [list {lb/lb_wr_data[0]} {lb/lb_wr_data[1]} {lb/lb_wr_data[2]} {lb/lb_wr_data[3]} {lb/lb_wr_data[4]} {lb/lb_wr_data[5]} {lb/lb_wr_data[6]} {lb/lb_wr_data[7]} {lb/lb_wr_data[8]} {lb/lb_wr_data[9]} {lb/lb_wr_data[10]} {lb/lb_wr_data[11]} {lb/lb_wr_data[12]} {lb/lb_wr_data[13]} {lb/lb_wr_data[14]} {lb/lb_wr_data[15]} {lb/lb_wr_data[16]} {lb/lb_wr_data[17]} {lb/lb_wr_data[18]} {lb/lb_wr_data[19]} {lb/lb_wr_data[20]} {lb/lb_wr_data[21]} {lb/lb_wr_data[22]} {lb/lb_wr_data[23]} {lb/lb_wr_data[24]} {lb/lb_wr_data[25]} {lb/lb_wr_data[26]} {lb/lb_wr_data[27]} {lb/lb_wr_data[28]} {lb/lb_wr_data[29]} {lb/lb_wr_data[30]} {lb/lb_wr_data[31]} {lb/lb_wr_data[32]} {lb/lb_wr_data[33]} {lb/lb_wr_data[34]} {lb/lb_wr_data[35]} {lb/lb_wr_data[36]} {lb/lb_wr_data[37]} {lb/lb_wr_data[38]} {lb/lb_wr_data[39]} {lb/lb_wr_data[40]} {lb/lb_wr_data[41]} {lb/lb_wr_data[42]} {lb/lb_wr_data[43]} {lb/lb_wr_data[44]} {lb/lb_wr_data[45]} {lb/lb_wr_data[46]} {lb/lb_wr_data[47]} {lb/lb_wr_data[48]} {lb/lb_wr_data[49]} {lb/lb_wr_data[50]} {lb/lb_wr_data[51]} {lb/lb_wr_data[52]} {lb/lb_wr_data[53]} {lb/lb_wr_data[54]} {lb/lb_wr_data[55]} {lb/lb_wr_data[56]} {lb/lb_wr_data[57]} {lb/lb_wr_data[58]} {lb/lb_wr_data[59]} {lb/lb_wr_data[60]} {lb/lb_wr_data[61]} {lb/lb_wr_data[62]} {lb/lb_wr_data[63]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe19]
+set_property port_width 64 [get_debug_ports u_ila_0/probe19]
+connect_debug_port u_ila_0/probe19 [get_nets [list {lb/beam_data_o[0]} {lb/beam_data_o[1]} {lb/beam_data_o[2]} {lb/beam_data_o[3]} {lb/beam_data_o[4]} {lb/beam_data_o[5]} {lb/beam_data_o[6]} {lb/beam_data_o[7]} {lb/beam_data_o[8]} {lb/beam_data_o[9]} {lb/beam_data_o[10]} {lb/beam_data_o[11]} {lb/beam_data_o[12]} {lb/beam_data_o[13]} {lb/beam_data_o[14]} {lb/beam_data_o[15]} {lb/beam_data_o[16]} {lb/beam_data_o[17]} {lb/beam_data_o[18]} {lb/beam_data_o[19]} {lb/beam_data_o[20]} {lb/beam_data_o[21]} {lb/beam_data_o[22]} {lb/beam_data_o[23]} {lb/beam_data_o[24]} {lb/beam_data_o[25]} {lb/beam_data_o[26]} {lb/beam_data_o[27]} {lb/beam_data_o[28]} {lb/beam_data_o[29]} {lb/beam_data_o[30]} {lb/beam_data_o[31]} {lb/beam_data_o[32]} {lb/beam_data_o[33]} {lb/beam_data_o[34]} {lb/beam_data_o[35]} {lb/beam_data_o[36]} {lb/beam_data_o[37]} {lb/beam_data_o[38]} {lb/beam_data_o[39]} {lb/beam_data_o[40]} {lb/beam_data_o[41]} {lb/beam_data_o[42]} {lb/beam_data_o[43]} {lb/beam_data_o[44]} {lb/beam_data_o[45]} {lb/beam_data_o[46]} {lb/beam_data_o[47]} {lb/beam_data_o[48]} {lb/beam_data_o[49]} {lb/beam_data_o[50]} {lb/beam_data_o[51]} {lb/beam_data_o[52]} {lb/beam_data_o[53]} {lb/beam_data_o[54]} {lb/beam_data_o[55]} {lb/beam_data_o[56]} {lb/beam_data_o[57]} {lb/beam_data_o[58]} {lb/beam_data_o[59]} {lb/beam_data_o[60]} {lb/beam_data_o[61]} {lb/beam_data_o[62]} {lb/beam_data_o[63]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe20]
+set_property port_width 1 [get_debug_ports u_ila_0/probe20]
+connect_debug_port u_ila_0/probe20 [get_nets [list pcie_/app/PIO/PIO_EP_inst/bar_hit]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe21]
+set_property port_width 1 [get_debug_ports u_ila_0/probe21]
+connect_debug_port u_ila_0/probe21 [get_nets [list pcie_/app/PIO/PIO_EP_inst/beam]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe22]
+set_property port_width 1 [get_debug_ports u_ila_0/probe22]
+connect_debug_port u_ila_0/probe22 [get_nets [list lb/beam]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe23]
+set_property port_width 1 [get_debug_ports u_ila_0/probe23]
+connect_debug_port u_ila_0/probe23 [get_nets [list pcie_/app/PIO/PIO_EP_inst/beam_busy_w]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe24]
+set_property port_width 1 [get_debug_ports u_ila_0/probe24]
+connect_debug_port u_ila_0/probe24 [get_nets [list pcie_/app/PIO/PIO_EP_inst/beam_prep]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe25]
+set_property port_width 1 [get_debug_ports u_ila_0/probe25]
+connect_debug_port u_ila_0/probe25 [get_nets [list lb/beaming_in_progress]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe26]
+set_property port_width 1 [get_debug_ports u_ila_0/probe26]
+connect_debug_port u_ila_0/probe26 [get_nets [list pcie_/app/PIO/PIO_EP_inst/beaming_in_progress]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe27]
+set_property port_width 1 [get_debug_ports u_ila_0/probe27]
+connect_debug_port u_ila_0/probe27 [get_nets [list pcie_/app/PIO/PIO_EP_inst/busy]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe28]
+set_property port_width 1 [get_debug_ports u_ila_0/probe28]
+connect_debug_port u_ila_0/probe28 [get_nets [list pcie_/app/PIO/PIO_EP_inst/compl_done]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe29]
+set_property port_width 1 [get_debug_ports u_ila_0/probe29]
+connect_debug_port u_ila_0/probe29 [get_nets [list pcie_/app/PIO/PIO_EP_inst/compl_done_int]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe30]
+set_property port_width 1 [get_debug_ports u_ila_0/probe30]
+connect_debug_port u_ila_0/probe30 [get_nets [list pcie_/app/PIO/PIO_EP_inst/eng_busy]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe31]
+set_property port_width 1 [get_debug_ports u_ila_0/probe31]
+connect_debug_port u_ila_0/probe31 [get_nets [list lb/loop_wr_en]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe32]
+set_property port_width 1 [get_debug_ports u_ila_0/probe32]
+connect_debug_port u_ila_0/probe32 [get_nets [list lb/loopback_beam]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe33]
+set_property port_width 1 [get_debug_ports u_ila_0/probe33]
+connect_debug_port u_ila_0/probe33 [get_nets [list pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tlast]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe34]
+set_property port_width 1 [get_debug_ports u_ila_0/probe34]
+connect_debug_port u_ila_0/probe34 [get_nets [list pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tready]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe35]
+set_property port_width 1 [get_debug_ports u_ila_0/probe35]
+connect_debug_port u_ila_0/probe35 [get_nets [list pcie_/app/PIO/PIO_EP_inst/m_axis_rx_tvalid]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe36]
+set_property port_width 1 [get_debug_ports u_ila_0/probe36]
+connect_debug_port u_ila_0/probe36 [get_nets [list pcie_/app/PIO/PIO_EP_inst/rd_en]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe37]
+set_property port_width 1 [get_debug_ports u_ila_0/probe37]
+connect_debug_port u_ila_0/probe37 [get_nets [list pcie_/app/PIO/PIO_EP_inst/req_compl]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe38]
+set_property port_width 1 [get_debug_ports u_ila_0/probe38]
+connect_debug_port u_ila_0/probe38 [get_nets [list pcie_/app/PIO/PIO_EP_inst/req_compl_int]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe39]
+set_property port_width 1 [get_debug_ports u_ila_0/probe39]
+connect_debug_port u_ila_0/probe39 [get_nets [list pcie_/app/PIO/PIO_EP_inst/req_compl_wd]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe40]
+set_property port_width 1 [get_debug_ports u_ila_0/probe40]
+connect_debug_port u_ila_0/probe40 [get_nets [list pcie_/app/PIO/PIO_EP_inst/req_ep]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe41]
+set_property port_width 1 [get_debug_ports u_ila_0/probe41]
+connect_debug_port u_ila_0/probe41 [get_nets [list pcie_/app/PIO/PIO_EP_inst/req_td]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe42]
+set_property port_width 1 [get_debug_ports u_ila_0/probe42]
+connect_debug_port u_ila_0/probe42 [get_nets [list pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tlast]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe43]
+set_property port_width 1 [get_debug_ports u_ila_0/probe43]
+connect_debug_port u_ila_0/probe43 [get_nets [list pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tready]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe44]
+set_property port_width 1 [get_debug_ports u_ila_0/probe44]
+connect_debug_port u_ila_0/probe44 [get_nets [list pcie_/app/PIO/PIO_EP_inst/s_axis_tx_tvalid]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe45]
+set_property port_width 1 [get_debug_ports u_ila_0/probe45]
+connect_debug_port u_ila_0/probe45 [get_nets [list pcie_/tx_cfg_gnt_w]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe46]
+set_property port_width 1 [get_debug_ports u_ila_0/probe46]
+connect_debug_port u_ila_0/probe46 [get_nets [list pcie_/tx_cfg_req]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe47]
+set_property port_width 1 [get_debug_ports u_ila_0/probe47]
+connect_debug_port u_ila_0/probe47 [get_nets [list pcie_/app/PIO/PIO_EP_inst/tx_src_dsc]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe48]
+set_property port_width 1 [get_debug_ports u_ila_0/probe48]
+connect_debug_port u_ila_0/probe48 [get_nets [list pcie_/app/PIO/PIO_EP_inst/wr_addr_valid]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe49]
+set_property port_width 1 [get_debug_ports u_ila_0/probe49]
+connect_debug_port u_ila_0/probe49 [get_nets [list pcie_/app/PIO/PIO_EP_inst/wr_busy]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe50]
+set_property port_width 1 [get_debug_ports u_ila_0/probe50]
+connect_debug_port u_ila_0/probe50 [get_nets [list pcie_/app/PIO/PIO_EP_inst/wr_en]]
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets u_ila_0_pipe_userclk2_out]

@@ -1,0 +1,145 @@
+      for (station_ = 0; station_ < 3'd7; station_ = station_+1) // GEM sub-sector loop
+      begin
+         // pack GEM clusters into the input delay line
+         for (j = 0; j < N_GE11_LAY; j = j+1) // superchamber/stack layer?
+         begin
+            for (k = 0; k < GEM_CLS_PER_BX; k = k+1) // cluster in layer loop
+            begin
+                gem_inp_del_in[gem_pos +: GEM_CLU_BW] = 
+                {
+                    ge11_cl[station_][j][k].vf,
+                    ge11_cl[station_][j][k].csz,
+                    ge11_cl[station_][j][k].prt,
+                    ge11_cl[station_][j][k].str
+                };
+                gem_pos += GEM_CLU_BW;
+            end
+         end
+      end
+
+ge11_cl[6][1][7].vf, ge11_cl[6][1][7].csz, ge11_cl[6][1][7].prt, ge11_cl[6][1][7].str,
+ge11_cl[6][1][6].vf, ge11_cl[6][1][6].csz, ge11_cl[6][1][6].prt, ge11_cl[6][1][6].str,
+ge11_cl[6][1][5].vf, ge11_cl[6][1][5].csz, ge11_cl[6][1][5].prt, ge11_cl[6][1][5].str,
+ge11_cl[6][1][4].vf, ge11_cl[6][1][4].csz, ge11_cl[6][1][4].prt, ge11_cl[6][1][4].str,
+ge11_cl[6][1][3].vf, ge11_cl[6][1][3].csz, ge11_cl[6][1][3].prt, ge11_cl[6][1][3].str,
+ge11_cl[6][1][2].vf, ge11_cl[6][1][2].csz, ge11_cl[6][1][2].prt, ge11_cl[6][1][2].str,
+ge11_cl[6][1][1].vf, ge11_cl[6][1][1].csz, ge11_cl[6][1][1].prt, ge11_cl[6][1][1].str,
+ge11_cl[6][1][0].vf, ge11_cl[6][1][0].csz, ge11_cl[6][1][0].prt, ge11_cl[6][1][0].str,
+                	             		           		         
+ge11_cl[6][0][7].vf, ge11_cl[6][0][7].csz, ge11_cl[6][0][7].prt, ge11_cl[6][0][7].str,
+ge11_cl[6][0][6].vf, ge11_cl[6][0][6].csz, ge11_cl[6][0][6].prt, ge11_cl[6][0][6].str,
+ge11_cl[6][0][5].vf, ge11_cl[6][0][5].csz, ge11_cl[6][0][5].prt, ge11_cl[6][0][5].str,
+ge11_cl[6][0][4].vf, ge11_cl[6][0][4].csz, ge11_cl[6][0][4].prt, ge11_cl[6][0][4].str,
+ge11_cl[6][0][3].vf, ge11_cl[6][0][3].csz, ge11_cl[6][0][3].prt, ge11_cl[6][0][3].str,
+ge11_cl[6][0][2].vf, ge11_cl[6][0][2].csz, ge11_cl[6][0][2].prt, ge11_cl[6][0][2].str,
+ge11_cl[6][0][1].vf, ge11_cl[6][0][1].csz, ge11_cl[6][0][1].prt, ge11_cl[6][0][1].str,
+ge11_cl[6][0][0].vf, ge11_cl[6][0][0].csz, ge11_cl[6][0][0].prt, ge11_cl[6][0][0].str,
+                	             		           		         
+ge11_cl[5][1][7].vf, ge11_cl[5][1][7].csz, ge11_cl[5][1][7].prt, ge11_cl[5][1][7].str,
+ge11_cl[5][1][6].vf, ge11_cl[5][1][6].csz, ge11_cl[5][1][6].prt, ge11_cl[5][1][6].str,
+ge11_cl[5][1][5].vf, ge11_cl[5][1][5].csz, ge11_cl[5][1][5].prt, ge11_cl[5][1][5].str,
+ge11_cl[5][1][4].vf, ge11_cl[5][1][4].csz, ge11_cl[5][1][4].prt, ge11_cl[5][1][4].str,
+ge11_cl[5][1][3].vf, ge11_cl[5][1][3].csz, ge11_cl[5][1][3].prt, ge11_cl[5][1][3].str,
+ge11_cl[5][1][2].vf, ge11_cl[5][1][2].csz, ge11_cl[5][1][2].prt, ge11_cl[5][1][2].str,
+ge11_cl[5][1][1].vf, ge11_cl[5][1][1].csz, ge11_cl[5][1][1].prt, ge11_cl[5][1][1].str,
+ge11_cl[5][1][0].vf, ge11_cl[5][1][0].csz, ge11_cl[5][1][0].prt, ge11_cl[5][1][0].str,
+                	             		           		         
+ge11_cl[5][0][7].vf, ge11_cl[5][0][7].csz, ge11_cl[5][0][7].prt, ge11_cl[5][0][7].str,
+ge11_cl[5][0][6].vf, ge11_cl[5][0][6].csz, ge11_cl[5][0][6].prt, ge11_cl[5][0][6].str,
+ge11_cl[5][0][5].vf, ge11_cl[5][0][5].csz, ge11_cl[5][0][5].prt, ge11_cl[5][0][5].str,
+ge11_cl[5][0][4].vf, ge11_cl[5][0][4].csz, ge11_cl[5][0][4].prt, ge11_cl[5][0][4].str,
+ge11_cl[5][0][3].vf, ge11_cl[5][0][3].csz, ge11_cl[5][0][3].prt, ge11_cl[5][0][3].str,
+ge11_cl[5][0][2].vf, ge11_cl[5][0][2].csz, ge11_cl[5][0][2].prt, ge11_cl[5][0][2].str,
+ge11_cl[5][0][1].vf, ge11_cl[5][0][1].csz, ge11_cl[5][0][1].prt, ge11_cl[5][0][1].str,
+ge11_cl[5][0][0].vf, ge11_cl[5][0][0].csz, ge11_cl[5][0][0].prt, ge11_cl[5][0][0].str,
+                	             		           		         
+ge11_cl[4][1][7].vf, ge11_cl[4][1][7].csz, ge11_cl[4][1][7].prt, ge11_cl[4][1][7].str,
+ge11_cl[4][1][6].vf, ge11_cl[4][1][6].csz, ge11_cl[4][1][6].prt, ge11_cl[4][1][6].str,
+ge11_cl[4][1][5].vf, ge11_cl[4][1][5].csz, ge11_cl[4][1][5].prt, ge11_cl[4][1][5].str,
+ge11_cl[4][1][4].vf, ge11_cl[4][1][4].csz, ge11_cl[4][1][4].prt, ge11_cl[4][1][4].str,
+ge11_cl[4][1][3].vf, ge11_cl[4][1][3].csz, ge11_cl[4][1][3].prt, ge11_cl[4][1][3].str,
+ge11_cl[4][1][2].vf, ge11_cl[4][1][2].csz, ge11_cl[4][1][2].prt, ge11_cl[4][1][2].str,
+ge11_cl[4][1][1].vf, ge11_cl[4][1][1].csz, ge11_cl[4][1][1].prt, ge11_cl[4][1][1].str,
+ge11_cl[4][1][0].vf, ge11_cl[4][1][0].csz, ge11_cl[4][1][0].prt, ge11_cl[4][1][0].str,
+                	             		           		         
+ge11_cl[4][0][7].vf, ge11_cl[4][0][7].csz, ge11_cl[4][0][7].prt, ge11_cl[4][0][7].str,
+ge11_cl[4][0][6].vf, ge11_cl[4][0][6].csz, ge11_cl[4][0][6].prt, ge11_cl[4][0][6].str,
+ge11_cl[4][0][5].vf, ge11_cl[4][0][5].csz, ge11_cl[4][0][5].prt, ge11_cl[4][0][5].str,
+ge11_cl[4][0][4].vf, ge11_cl[4][0][4].csz, ge11_cl[4][0][4].prt, ge11_cl[4][0][4].str,
+ge11_cl[4][0][3].vf, ge11_cl[4][0][3].csz, ge11_cl[4][0][3].prt, ge11_cl[4][0][3].str,
+ge11_cl[4][0][2].vf, ge11_cl[4][0][2].csz, ge11_cl[4][0][2].prt, ge11_cl[4][0][2].str,
+ge11_cl[4][0][1].vf, ge11_cl[4][0][1].csz, ge11_cl[4][0][1].prt, ge11_cl[4][0][1].str,
+ge11_cl[4][0][0].vf, ge11_cl[4][0][0].csz, ge11_cl[4][0][0].prt, ge11_cl[4][0][0].str,
+                	             		           		         
+ge11_cl[3][1][7].vf, ge11_cl[3][1][7].csz, ge11_cl[3][1][7].prt, ge11_cl[3][1][7].str,
+ge11_cl[3][1][6].vf, ge11_cl[3][1][6].csz, ge11_cl[3][1][6].prt, ge11_cl[3][1][6].str,
+ge11_cl[3][1][5].vf, ge11_cl[3][1][5].csz, ge11_cl[3][1][5].prt, ge11_cl[3][1][5].str,
+ge11_cl[3][1][4].vf, ge11_cl[3][1][4].csz, ge11_cl[3][1][4].prt, ge11_cl[3][1][4].str,
+ge11_cl[3][1][3].vf, ge11_cl[3][1][3].csz, ge11_cl[3][1][3].prt, ge11_cl[3][1][3].str,
+ge11_cl[3][1][2].vf, ge11_cl[3][1][2].csz, ge11_cl[3][1][2].prt, ge11_cl[3][1][2].str,
+ge11_cl[3][1][1].vf, ge11_cl[3][1][1].csz, ge11_cl[3][1][1].prt, ge11_cl[3][1][1].str,
+ge11_cl[3][1][0].vf, ge11_cl[3][1][0].csz, ge11_cl[3][1][0].prt, ge11_cl[3][1][0].str,
+                	             		           		         
+ge11_cl[3][0][7].vf, ge11_cl[3][0][7].csz, ge11_cl[3][0][7].prt, ge11_cl[3][0][7].str,
+ge11_cl[3][0][6].vf, ge11_cl[3][0][6].csz, ge11_cl[3][0][6].prt, ge11_cl[3][0][6].str,
+ge11_cl[3][0][5].vf, ge11_cl[3][0][5].csz, ge11_cl[3][0][5].prt, ge11_cl[3][0][5].str,
+ge11_cl[3][0][4].vf, ge11_cl[3][0][4].csz, ge11_cl[3][0][4].prt, ge11_cl[3][0][4].str,
+ge11_cl[3][0][3].vf, ge11_cl[3][0][3].csz, ge11_cl[3][0][3].prt, ge11_cl[3][0][3].str,
+ge11_cl[3][0][2].vf, ge11_cl[3][0][2].csz, ge11_cl[3][0][2].prt, ge11_cl[3][0][2].str,
+ge11_cl[3][0][1].vf, ge11_cl[3][0][1].csz, ge11_cl[3][0][1].prt, ge11_cl[3][0][1].str,
+ge11_cl[3][0][0].vf, ge11_cl[3][0][0].csz, ge11_cl[3][0][0].prt, ge11_cl[3][0][0].str,
+                	             		           		         
+ge11_cl[2][1][7].vf, ge11_cl[2][1][7].csz, ge11_cl[2][1][7].prt, ge11_cl[2][1][7].str,
+ge11_cl[2][1][6].vf, ge11_cl[2][1][6].csz, ge11_cl[2][1][6].prt, ge11_cl[2][1][6].str,
+ge11_cl[2][1][5].vf, ge11_cl[2][1][5].csz, ge11_cl[2][1][5].prt, ge11_cl[2][1][5].str,
+ge11_cl[2][1][4].vf, ge11_cl[2][1][4].csz, ge11_cl[2][1][4].prt, ge11_cl[2][1][4].str,
+ge11_cl[2][1][3].vf, ge11_cl[2][1][3].csz, ge11_cl[2][1][3].prt, ge11_cl[2][1][3].str,
+ge11_cl[2][1][2].vf, ge11_cl[2][1][2].csz, ge11_cl[2][1][2].prt, ge11_cl[2][1][2].str,
+ge11_cl[2][1][1].vf, ge11_cl[2][1][1].csz, ge11_cl[2][1][1].prt, ge11_cl[2][1][1].str,
+ge11_cl[2][1][0].vf, ge11_cl[2][1][0].csz, ge11_cl[2][1][0].prt, ge11_cl[2][1][0].str,
+                	             		           		         
+ge11_cl[2][0][7].vf, ge11_cl[2][0][7].csz, ge11_cl[2][0][7].prt, ge11_cl[2][0][7].str,
+ge11_cl[2][0][6].vf, ge11_cl[2][0][6].csz, ge11_cl[2][0][6].prt, ge11_cl[2][0][6].str,
+ge11_cl[2][0][5].vf, ge11_cl[2][0][5].csz, ge11_cl[2][0][5].prt, ge11_cl[2][0][5].str,
+ge11_cl[2][0][4].vf, ge11_cl[2][0][4].csz, ge11_cl[2][0][4].prt, ge11_cl[2][0][4].str,
+ge11_cl[2][0][3].vf, ge11_cl[2][0][3].csz, ge11_cl[2][0][3].prt, ge11_cl[2][0][3].str,
+ge11_cl[2][0][2].vf, ge11_cl[2][0][2].csz, ge11_cl[2][0][2].prt, ge11_cl[2][0][2].str,
+ge11_cl[2][0][1].vf, ge11_cl[2][0][1].csz, ge11_cl[2][0][1].prt, ge11_cl[2][0][1].str,
+ge11_cl[2][0][0].vf, ge11_cl[2][0][0].csz, ge11_cl[2][0][0].prt, ge11_cl[2][0][0].str,
+                	             		           		         
+ge11_cl[1][1][7].vf, ge11_cl[1][1][7].csz, ge11_cl[1][1][7].prt, ge11_cl[1][1][7].str,
+ge11_cl[1][1][6].vf, ge11_cl[1][1][6].csz, ge11_cl[1][1][6].prt, ge11_cl[1][1][6].str,
+ge11_cl[1][1][5].vf, ge11_cl[1][1][5].csz, ge11_cl[1][1][5].prt, ge11_cl[1][1][5].str,
+ge11_cl[1][1][4].vf, ge11_cl[1][1][4].csz, ge11_cl[1][1][4].prt, ge11_cl[1][1][4].str,
+ge11_cl[1][1][3].vf, ge11_cl[1][1][3].csz, ge11_cl[1][1][3].prt, ge11_cl[1][1][3].str,
+ge11_cl[1][1][2].vf, ge11_cl[1][1][2].csz, ge11_cl[1][1][2].prt, ge11_cl[1][1][2].str,
+ge11_cl[1][1][1].vf, ge11_cl[1][1][1].csz, ge11_cl[1][1][1].prt, ge11_cl[1][1][1].str,
+ge11_cl[1][1][0].vf, ge11_cl[1][1][0].csz, ge11_cl[1][1][0].prt, ge11_cl[1][1][0].str,
+                	             		           		         
+ge11_cl[1][0][7].vf, ge11_cl[1][0][7].csz, ge11_cl[1][0][7].prt, ge11_cl[1][0][7].str,
+ge11_cl[1][0][6].vf, ge11_cl[1][0][6].csz, ge11_cl[1][0][6].prt, ge11_cl[1][0][6].str,
+ge11_cl[1][0][5].vf, ge11_cl[1][0][5].csz, ge11_cl[1][0][5].prt, ge11_cl[1][0][5].str,
+ge11_cl[1][0][4].vf, ge11_cl[1][0][4].csz, ge11_cl[1][0][4].prt, ge11_cl[1][0][4].str,
+ge11_cl[1][0][3].vf, ge11_cl[1][0][3].csz, ge11_cl[1][0][3].prt, ge11_cl[1][0][3].str,
+ge11_cl[1][0][2].vf, ge11_cl[1][0][2].csz, ge11_cl[1][0][2].prt, ge11_cl[1][0][2].str,
+ge11_cl[1][0][1].vf, ge11_cl[1][0][1].csz, ge11_cl[1][0][1].prt, ge11_cl[1][0][1].str,
+ge11_cl[1][0][0].vf, ge11_cl[1][0][0].csz, ge11_cl[1][0][0].prt, ge11_cl[1][0][0].str,
+                	             		           		         
+ge11_cl[0][1][7].vf, ge11_cl[0][1][7].csz, ge11_cl[0][1][7].prt, ge11_cl[0][1][7].str,
+ge11_cl[0][1][6].vf, ge11_cl[0][1][6].csz, ge11_cl[0][1][6].prt, ge11_cl[0][1][6].str,
+ge11_cl[0][1][5].vf, ge11_cl[0][1][5].csz, ge11_cl[0][1][5].prt, ge11_cl[0][1][5].str,
+ge11_cl[0][1][4].vf, ge11_cl[0][1][4].csz, ge11_cl[0][1][4].prt, ge11_cl[0][1][4].str,
+ge11_cl[0][1][3].vf, ge11_cl[0][1][3].csz, ge11_cl[0][1][3].prt, ge11_cl[0][1][3].str,
+ge11_cl[0][1][2].vf, ge11_cl[0][1][2].csz, ge11_cl[0][1][2].prt, ge11_cl[0][1][2].str,
+ge11_cl[0][1][1].vf, ge11_cl[0][1][1].csz, ge11_cl[0][1][1].prt, ge11_cl[0][1][1].str,
+ge11_cl[0][1][0].vf, ge11_cl[0][1][0].csz, ge11_cl[0][1][0].prt, ge11_cl[0][1][0].str,
+                	             		           		         
+ge11_cl[0][0][7].vf, ge11_cl[0][0][7].csz, ge11_cl[0][0][7].prt, ge11_cl[0][0][7].str,
+ge11_cl[0][0][6].vf, ge11_cl[0][0][6].csz, ge11_cl[0][0][6].prt, ge11_cl[0][0][6].str,
+ge11_cl[0][0][5].vf, ge11_cl[0][0][5].csz, ge11_cl[0][0][5].prt, ge11_cl[0][0][5].str,
+ge11_cl[0][0][4].vf, ge11_cl[0][0][4].csz, ge11_cl[0][0][4].prt, ge11_cl[0][0][4].str,
+ge11_cl[0][0][3].vf, ge11_cl[0][0][3].csz, ge11_cl[0][0][3].prt, ge11_cl[0][0][3].str,
+ge11_cl[0][0][2].vf, ge11_cl[0][0][2].csz, ge11_cl[0][0][2].prt, ge11_cl[0][0][2].str,
+ge11_cl[0][0][1].vf, ge11_cl[0][0][1].csz, ge11_cl[0][0][1].prt, ge11_cl[0][0][1].str,
+ge11_cl[0][0][0].vf, ge11_cl[0][0][0].csz, ge11_cl[0][0][0].prt, ge11_cl[0][0][0].str
+  
