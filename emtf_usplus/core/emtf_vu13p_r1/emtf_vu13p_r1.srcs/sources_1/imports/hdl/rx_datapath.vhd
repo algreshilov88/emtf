@@ -15,8 +15,8 @@ entity rx_datapath is
   generic(
     CH          : integer;
     INDEX       : integer;
-    MGT_KIND    : integer; -- GTY25G
-    IDLE_METHOD : integer; -- 1 or 2?
+    MGT_KIND    : integer;
+    IDLE_METHOD : integer;
     RX_INST     : integer
     );
   port(
@@ -157,7 +157,9 @@ begin
         special_bits_out         => linkStatusInfo_out.special_bits,
         index_lock_lost_out      => linkStatusInfo_out.rx_index_lock_lost,
         index_lock_lost_cntr_out => linkStatusInfo_out.rx_index_lock_lost_cntr,
-        wrong_index_cntr_out     => linkStatusInfo_out.wrong_index_cntr_out
+        wrong_index_cntr_out     => linkStatusInfo_out.wrong_index_cntr_out,
+        wbuf_add_word_out        => linkStatusInfo_out.wbuf_add_word_out,
+        rbuf_add_word_out        => linkStatusInfo_out.rbuf_add_word_out
         );
     --============================================================================================================================
 

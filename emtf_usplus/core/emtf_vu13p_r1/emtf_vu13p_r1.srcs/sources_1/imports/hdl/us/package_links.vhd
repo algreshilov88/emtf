@@ -33,7 +33,7 @@ package package_links is
   constant IDLE_WORD          : std_logic_vector(55 downto 0)  := x"0" & CONTROL_RESERVED & ZEROS_RESERVED;
 
   constant NUMBER_OF_CHAN_RW_REGS   : integer := 4;
-  constant NUMBER_OF_CHAN_RO_REGS   : integer := 5;
+  constant NUMBER_OF_CHAN_RO_REGS   : integer := 8;
   constant NUMBER_OF_COMMON_RW_REGS : integer := 1;
   constant NUMBER_OF_COMMON_RO_REGS : integer := 1;
 
@@ -53,6 +53,7 @@ package package_links is
   type type_vector_of_stdlogicvec_x7 is array(natural range <>) of std_logic_vector(6 downto 0);
   type type_vector_of_stdlogicvec_x8 is array(natural range <>) of std_logic_vector(7 downto 0);
   type type_vector_of_stdlogicvec_x9 is array(natural range <>) of std_logic_vector(8 downto 0);
+  type type_vector_of_stdlogicvec_x12 is array(natural range <>) of std_logic_vector(11 downto 0);
   type type_vector_of_stdlogicvec_x16 is array(natural range <>) of std_logic_vector(15 downto 0);
   type type_vector_of_stdlogicvec_x21 is array(natural range <>) of std_logic_vector(20 downto 0);
   type type_vector_of_stdlogicvec_x24 is array(natural range <>) of std_logic_vector(23 downto 0);
@@ -112,15 +113,17 @@ package package_links is
 
   type linkStatusInfo_t is
   record
-    crc_errors              : std_logic_vector(7 downto 0);    
-    hard_errors             : std_logic_vector(3 downto 0);
-    cwt_single_errors       : std_logic_vector(3 downto 0);
-    cwt_double_errors       : std_logic_vector(3 downto 0);
-    packet_cntr             : std_logic_vector(7 downto 0);
+    crc_errors              : std_logic_vector(31 downto 0);    
+    hard_errors             : std_logic_vector(15 downto 0);
+    cwt_single_errors       : std_logic_vector(15 downto 0);
+    cwt_double_errors       : std_logic_vector(15 downto 0);
+    packet_cntr             : std_logic_vector(31 downto 0);
     special_bits            : std_logic_vector(3 downto 0);
     rx_index_lock_lost      : std_logic;
-    rx_index_lock_lost_cntr : std_logic_vector(3 downto 0);
-    wrong_index_cntr_out    : std_logic_vector(3 downto 0);
+    rx_index_lock_lost_cntr : std_logic_vector(15 downto 0);
+    wrong_index_cntr_out    : std_logic_vector(15 downto 0);
+    wbuf_add_word_out       : std_logic_vector(8 downto 0);
+    rbuf_add_word_out       : std_logic_vector(8 downto 0);
   end record;
 
   type invalidTxComp_t is
@@ -143,19 +146,16 @@ package package_links is
   record  
     crate_id                : std_logic_vector(7 downto 0);
     slot_id                 : std_logic_vector(3 downto 0);
-    tm_interval             : type_vector_of_stdlogicvec_x5(N_CHANNELS-1 downto 0);
-    packet_payload_size     : type_vector_of_stdlogicvec_x8(N_CHANNELS-1 downto 0);
+    packet_size             : type_vector_of_stdlogicvec_x12(N_CHANNELS-1 downto 0);
+    packet_interval         : type_vector_of_stdlogicvec_x12(N_CHANNELS-1 downto 0);
   end record;
   
   type linkRxMetadata_t is
   record  
     crate_id                : std_logic_vector(7 downto 0);
     slot_id                 : std_logic_vector(3 downto 0);
-    tm_interval             : std_logic_vector(4 downto 0);
-    clk_multiplier          : std_logic_vector(3 downto 0);
-    packet_size             : std_logic_vector(7 downto 0);
     channel_id              : std_logic_vector(7 downto 0);
-    IM                      : std_logic;
+    link_id_1               : std_logic_vector(31 downto 0);
   end record;  
 
   type rxram_pointer_t is

@@ -66,8 +66,8 @@ architecture Behavioral of det_filler_gen is
 
 begin
 
-  crc_filler_i <= fifo_data_in(65); 
-  tag_filler_i <= fifo_data_in(66);
+  crc_filler_i <= fifo_data_in(65) and not empty_in; 
+  tag_filler_i <= fifo_data_in(66) and not empty_in;
 
   process(txusrclk)
   begin
@@ -76,7 +76,8 @@ begin
         filler_mux_i <= "00";
         tag_filler_i1 <= '0';
       else
-        if tx_gb_datavalid_in = '1' and empty_in = '0' then 
+--        if tx_gb_datavalid_in = '1' and empty_in = '0' then 
+        if tx_gb_datavalid_in = '1' then 
             if crc_filler_i = '1' and tag_filler_i = '0' then
               filler_mux_i <= "01";         -- crc filler 
               tag_filler_i1 <= '0';
@@ -163,14 +164,16 @@ begin
         end if;
 
         -- pause fifo read and pipeline for 1 more cc when pause comes after filler
-        if (tx_gb_datavalid_in = '0' and filler_word_o = '1' and empty_i1 = '0') then
+--        if (tx_gb_datavalid_in = '0' and filler_word_o = '1' and empty_i1 = '0') then
+        if (tx_gb_datavalid_in = '0' and filler_word_o = '1') then
           pause_after_tag_flag <= '1';
         elsif tx_gb_datavalid_in = '1' then
           pause_after_tag_flag <= '0';
         end if;
 
         -- pause fifo read and pipeline for 1 more cc when empty comes with filler
-        empty_after_tag_flag <= empty_in and filler_word_o;
+--        empty_after_tag_flag <= empty_in and filler_word_o;
+        empty_after_tag_flag <= '0'; --empty_in and filler_word_o;
 
         -- there is one very special case where you have filler -> empty -> pause
         if tx_gb_datavalid_in = '0' and empty_after_tag_flag = '1' then
@@ -181,7 +184,7 @@ begin
 
         -- 1 cc pipeline
         crc_word_link_out  <= crc_word_link_in;
-        empty_i1           <= empty_in;
+        empty_i1           <= empty_in and not filler_word_o;
 
       end if;
     end if;
@@ -190,11 +193,12 @@ begin
 
   special_read_flags <= pause_after_tag_flag or empty_after_tag_flag or empty_after_tag_n_pause_flag;
 
-  read_fifo_o   <= tx_gb_datavalid_in and (empty_i1 or not filler_word_o) and not special_read_flags;
+--  read_fifo_o   <= tx_gb_datavalid_in and (empty_i1 or not filler_word_o) and not special_read_flags;
+  read_fifo_o   <= tx_gb_datavalid_in and (not filler_word_o) and not special_read_flags;
   read_fifo_out <= read_fifo_o;
 
   tx_gb_datavalid_out <= tx_gb_datavalid_i1;
-  empty_out           <= empty_i1;
+  empty_out           <= empty_i1 and not filler_word_o;
 
   crc_filler_flag_out <= '1' when filler_word_o = '1' and filler_mux_i = "01" else '0';
   align_tag_out       <= '1' when (filler_word_o = '1' and filler_mux_i = "10") or (filler_word_o = '1' and tag_filler_i2 = '1') else '0';

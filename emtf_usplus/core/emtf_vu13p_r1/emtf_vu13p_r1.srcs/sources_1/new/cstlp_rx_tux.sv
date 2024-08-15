@@ -4,7 +4,7 @@
 `include "mgt_gty_interfaces.sv"
 
 module cstlp_rx_tux
-# (parameter N = 22)
+# (parameter N = 24)
 (
     input freerun_clk     ,
     input ttc_clk         ,

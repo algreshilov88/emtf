@@ -153,16 +153,18 @@ module emtf_vu13p_top
 	mgt_gty_rx csc_outer [`CSC_LINKS_OUTER-1:0]();
 	mgt_gty_rx csc_inner [`CSC_LINKS_INNER-1:0]();
 
-	mgt_gty_rx rpc       [7:0]();
-	mgt_gty_rx gem       [13:0]();
+	mgt_gty_rx rpc       [10:0]();
+	mgt_gty_rx gem       [12:0]();
 
 	mgt_gty_tx daq       [0:0]();
-	mgt_gty_tx gmt       [24:0]();
+	mgt_gty_tx gmt       [17:0]();
 
 	wire cstlp_23_mmcm_clk;
+	wire slink_16_mmcm_clk;
 	wire cstlp_17_mmcm_clk;
-	wire cstlp_19_mmcm_clk;
-	wire slink_17_mmcm_clk;
+	wire cstlp_18_mmcm_clk;
+	wire cstlp_20_mmcm_clk;
+	wire cstlp_22_mmcm_clk;
 	wire cstlp_21_mmcm_clk;
 
 
@@ -180,8 +182,10 @@ module emtf_vu13p_top
         .gmt               (gmt              ),
         .cstlp_23_mmcm_clk (cstlp_23_mmcm_clk),
         .cstlp_17_mmcm_clk (cstlp_17_mmcm_clk),
-        .cstlp_19_mmcm_clk (cstlp_19_mmcm_clk),
-        .slink_17_mmcm_clk (slink_17_mmcm_clk),
+        .cstlp_18_mmcm_clk (cstlp_18_mmcm_clk),
+        .slink_16_mmcm_clk (slink_16_mmcm_clk),
+        .cstlp_20_mmcm_clk (cstlp_20_mmcm_clk),
+        .cstlp_22_mmcm_clk (cstlp_22_mmcm_clk),
         .cstlp_21_mmcm_clk (cstlp_21_mmcm_clk),
         .refclk            (refclk           ),
         .refclk_odiv       (refclk_odiv_b    )
@@ -228,7 +232,7 @@ module emtf_vu13p_top
         .clk320             ()
     );
         
-    localparam CSTLP_LINK_N = 22; // $size(gem) + $size(rpc) - $size does not seem to work on arrays of interfaces
+    localparam CSTLP_LINK_N = 24; // $size(gem) + $size(rpc) - $size does not seem to work on arrays of interfaces
     wire reset           ;
     wire [CSTLP_LINK_N-1:0] reset_cnt_in    ;
     wire [CSTLP_LINK_N-1:0] reset_latched_in;

@@ -41,7 +41,7 @@
         "OUTPUTDIR": [ { "value": "../../../../../../emtf_vu13p_r1.gen/sources_1/bd/apex_blk/ip/apex_blk_xlslice_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
-        "SWVERSION": [ { "value": "2022.2.2" } ],
+        "SWVERSION": [ { "value": "2022.2" } ],
         "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
       }
     },

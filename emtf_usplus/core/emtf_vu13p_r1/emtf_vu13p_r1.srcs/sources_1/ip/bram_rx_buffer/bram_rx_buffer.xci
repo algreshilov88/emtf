@@ -1,10 +1,10 @@
 {
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
-    "xci_name": "bram_rx_buffer_1",
+    "xci_name": "bram_rx_buffer",
     "component_reference": "xilinx.com:ip:blk_mem_gen:8.4",
     "ip_revision": "5",
-    "gen_directory": "../../../../emtf_vu13p_r1.gen/sources_1/ip/bram_rx_buffer_1",
+    "gen_directory": "../../../../emtf_vu13p_r1.gen/sources_1/ip/bram_rx_buffer",
     "parameters": {
       "component_parameters": {
         "Component_Name": [ { "value": "bram_rx_buffer_1", "resolve_type": "user", "usage": "all" } ],
@@ -176,10 +176,10 @@
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
         "IPREVISION": [ { "value": "5" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../emtf_vu13p_r1.gen/sources_1/ip/bram_rx_buffer_1" } ],
+        "OUTPUTDIR": [ { "value": "../../../../emtf_vu13p_r1.gen/sources_1/ip/bram_rx_buffer" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
-        "SWVERSION": [ { "value": "2022.2.2" } ],
+        "SWVERSION": [ { "value": "2022.2" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },

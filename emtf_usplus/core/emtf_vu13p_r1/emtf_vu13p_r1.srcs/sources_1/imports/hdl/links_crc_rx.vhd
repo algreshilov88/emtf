@@ -31,8 +31,8 @@ entity links_crc_rx is
         align_marker_out    : out std_logic;
         data_start_out      : out std_logic;
         end_of_packet_out   : out std_logic;
-        packet_cnt_out      : out std_logic_vector(7 downto 0);
-        crc_error_cnt_out   : out std_logic_vector(7 downto 0)
+        packet_cnt_out      : out std_logic_vector(31 downto 0);
+        crc_error_cnt_out   : out std_logic_vector(31 downto 0)
         );
 
 end links_crc_rx;
@@ -50,7 +50,8 @@ architecture behave of links_crc_rx is
     signal crc_rst                        : std_logic;
     signal latch_crc                      : std_logic;
     signal crc_error                      : std_logic;
-    signal crc_error_cnt, crc_checked_cnt : unsigned(7 downto 0);
+    signal crc_error_cnt                  : unsigned(31 downto 0);
+    signal crc_checked_cnt                : unsigned(31 downto 0);
     signal crc_valid_en                   : std_logic;
     signal back_to_back_dis               : std_logic;
     signal check_crc_i                    : std_logic;
@@ -196,10 +197,10 @@ begin
                 crc_checked_cnt <= (others => '0');
             else
                 if clken_in = '1'  then
-                    if crc_error = '1' and crc_error_cnt /= X"ff" then
+                    if crc_error = '1' and crc_error_cnt /= X"ffffffff" then
                         crc_error_cnt <= crc_error_cnt + 1;
                     end if;
-                    if check_crc_i = '1' and crc_checked_cnt /= X"ff" then
+                    if check_crc_i = '1' and crc_checked_cnt /= X"ffffffff" then
                         crc_checked_cnt <= crc_checked_cnt + 1;
                     end if;
                 end if;

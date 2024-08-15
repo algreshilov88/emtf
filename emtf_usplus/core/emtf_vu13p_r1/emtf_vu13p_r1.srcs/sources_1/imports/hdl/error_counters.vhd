@@ -22,9 +22,9 @@ entity error_counters is
     rxdatavalid_in           : in  std_logic;
     cwt_single_error_in      : in  std_logic;
     cwt_double_error_in      : in  std_logic;
-    hard_error_cnt_out       : out std_logic_vector(3 downto 0);
-    cwt_single_error_cnt_out : out std_logic_vector(3 downto 0);
-    cwt_double_error_cnt_out : out std_logic_vector(3 downto 0)
+    hard_error_cnt_out       : out std_logic_vector(15 downto 0);
+    cwt_single_error_cnt_out : out std_logic_vector(15 downto 0);
+    cwt_double_error_cnt_out : out std_logic_vector(15 downto 0)
     );
 
 end error_counters;
@@ -32,9 +32,9 @@ end error_counters;
 
 architecture RTL of error_counters is
 
-  signal hard_error_cnt       : std_logic_vector (3 downto 0);
-  signal cwt_single_error_cnt : std_logic_vector (3 downto 0);
-  signal cwt_double_error_cnt : std_logic_vector (3 downto 0);
+  signal hard_error_cnt       : std_logic_vector (15 downto 0);
+  signal cwt_single_error_cnt : std_logic_vector (15 downto 0);
+  signal cwt_double_error_cnt : std_logic_vector (15 downto 0);
   signal hard_error           : std_logic;
 
 begin
@@ -67,13 +67,13 @@ begin
         cwt_double_error_cnt <= (others => '0');
         hard_error_cnt       <= (others => '0');
       else
-        if cwt_single_error_in = '1' and cwt_single_error_cnt /= x"F" then
+        if cwt_single_error_in = '1' and cwt_single_error_cnt /= x"FFFF" then
           cwt_single_error_cnt <= cwt_single_error_cnt + 1;
         end if;
-        if cwt_double_error_in = '1' and cwt_double_error_cnt /= X"f" then
+        if cwt_double_error_in = '1' and cwt_double_error_cnt /= X"FFFF" then
           cwt_double_error_cnt <= cwt_double_error_cnt + 1;
         end if;
-        if hard_error = '1' and hard_error_cnt /= X"f" then
+        if hard_error = '1' and hard_error_cnt /= X"FFFF" then
           hard_error_cnt <= hard_error_cnt + 1;
         end if;      
       end if;

@@ -7,7 +7,7 @@
       "name": "apex_blk",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2022.2.2",
+      "tool_version": "2022.2",
       "validated": "true"
     },
     "design_tree": {
@@ -26,7 +26,6 @@
       },
       "rst_clk_wiz_100M": "",
       "rst_clk_wiz_100M_1": "",
-      "axi_chip2chip_0": "",
       "axi_interconnect_0": {
         "xbar": "",
         "s00_couplers": {
@@ -50,7 +49,8 @@
       "system_ila_0": "",
       "vio_0": "",
       "xlconstant_0": "",
-      "emtf_vu13p_register_0": ""
+      "emtf_vu13p_register_0": "",
+      "axi_chip2chip_0": ""
     },
     "ports": {
       "c2c_channel_up": {
@@ -651,52 +651,6 @@
         "xci_name": "apex_blk_rst_clk_wiz_100M_1_0",
         "xci_path": "ip/apex_blk_rst_clk_wiz_100M_1_0/apex_blk_rst_clk_wiz_100M_1_0.xci",
         "inst_hier_path": "rst_clk_wiz_100M_1"
-      },
-      "axi_chip2chip_0": {
-        "vlnv": "xilinx.com:ip:axi_chip2chip:5.0",
-        "xci_name": "apex_blk_axi_chip2chip_0_0",
-        "xci_path": "ip/apex_blk_axi_chip2chip_0_0/apex_blk_axi_chip2chip_0_0.xci",
-        "inst_hier_path": "axi_chip2chip_0",
-        "parameters": {
-          "C_ECC_ENABLE": {
-            "value": "false"
-          },
-          "C_EN_AXI_LINK_HNDLR": {
-            "value": "true"
-          },
-          "C_INTERFACE_MODE": {
-            "value": "1"
-          },
-          "C_INTERFACE_TYPE": {
-            "value": "3"
-          },
-          "C_MASTER_FPGA": {
-            "value": "0"
-          },
-          "C_M_AXI_WUSER_WIDTH": {
-            "value": "0"
-          }
-        },
-        "interface_ports": {
-          "m_axi": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Master",
-            "address_space_ref": "MAXI",
-            "base_address": {
-              "minimum": "0x00000000",
-              "maximum": "0xFFFFFFFF",
-              "width": "32"
-            }
-          }
-        },
-        "addressing": {
-          "address_spaces": {
-            "MAXI": {
-              "range": "4G",
-              "width": "32"
-            }
-          }
-        }
       },
       "axi_interconnect_0": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
@@ -1683,6 +1637,52 @@
         "xci_name": "apex_blk_emtf_vu13p_register_0_0",
         "xci_path": "ip/apex_blk_emtf_vu13p_register_0_0/apex_blk_emtf_vu13p_register_0_0.xci",
         "inst_hier_path": "emtf_vu13p_register_0"
+      },
+      "axi_chip2chip_0": {
+        "vlnv": "xilinx.com:ip:axi_chip2chip:5.0",
+        "xci_name": "apex_blk_axi_chip2chip_0_0",
+        "xci_path": "ip/apex_blk_axi_chip2chip_0_0/apex_blk_axi_chip2chip_0_0.xci",
+        "inst_hier_path": "axi_chip2chip_0",
+        "parameters": {
+          "C_ECC_ENABLE": {
+            "value": "false"
+          },
+          "C_EN_AXI_LINK_HNDLR": {
+            "value": "true"
+          },
+          "C_INTERFACE_MODE": {
+            "value": "1"
+          },
+          "C_INTERFACE_TYPE": {
+            "value": "3"
+          },
+          "C_MASTER_FPGA": {
+            "value": "0"
+          },
+          "C_M_AXI_WUSER_WIDTH": {
+            "value": "0"
+          }
+        },
+        "interface_ports": {
+          "m_axi": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "MAXI",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "MAXI": {
+              "range": "4G",
+              "width": "32"
+            }
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1732,8 +1732,8 @@
       "aurora_pma_init": {
         "ports": [
           "vio_0/probe_out1",
-          "axi_chip2chip_0/aurora_pma_init_in",
-          "system_ila_0/probe11"
+          "system_ila_0/probe11",
+          "axi_chip2chip_0/aurora_pma_init_in"
         ],
         "hdl_attributes": {
           "DEBUG": {
@@ -1796,9 +1796,6 @@
           "bram2/s_axi_aclk",
           "c2c_reset_fsm_0/phy_clk",
           "rst_clk_wiz_100M/slowest_sync_clk",
-          "axi_chip2chip_0/m_aclk",
-          "axi_chip2chip_0/axi_c2c_phy_clk",
-          "axi_chip2chip_0/aurora_init_clk",
           "axi_interconnect_0/ACLK",
           "axi_interconnect_0/S00_ACLK",
           "axi_interconnect_0/M00_ACLK",
@@ -1806,7 +1803,10 @@
           "axi_interconnect_0/M03_ACLK",
           "system_ila_0/clk",
           "vio_0/clk",
-          "emtf_vu13p_register_0/s00_axi_aclk"
+          "emtf_vu13p_register_0/s00_axi_aclk",
+          "axi_chip2chip_0/m_aclk",
+          "axi_chip2chip_0/axi_c2c_phy_clk",
+          "axi_chip2chip_0/aurora_init_clk"
         ]
       },
       "axi_chip2chip_0_axi_c2c_lnk_hndlr_in_progress": {
@@ -1830,8 +1830,8 @@
       "c2c_channel_up": {
         "ports": [
           "c2c_channel_up",
-          "axi_chip2chip_0/axi_c2c_aurora_tx_tready",
-          "system_ila_0/probe10"
+          "system_ila_0/probe10",
+          "axi_chip2chip_0/axi_c2c_aurora_tx_tready"
         ]
       },
       "c2c_config_error_out": {
@@ -1873,15 +1873,15 @@
       "c2c_m_aresetn": {
         "ports": [
           "c2c_reset_fsm_0/m_aresetn",
-          "axi_chip2chip_0/m_aresetn",
-          "system_ila_0/probe5"
+          "system_ila_0/probe5",
+          "axi_chip2chip_0/m_aresetn"
         ]
       },
       "c2c_mmcm_unlocked": {
         "ports": [
           "c2c_mmcm_unlocked",
-          "axi_chip2chip_0/aurora_mmcm_not_locked",
-          "system_ila_0/probe12"
+          "system_ila_0/probe12",
+          "axi_chip2chip_0/aurora_mmcm_not_locked"
         ]
       },
       "c2c_reset_fsm_state": {
@@ -1893,15 +1893,15 @@
       "c2c_rx_data": {
         "ports": [
           "c2c_rx_data",
-          "axi_chip2chip_0/axi_c2c_aurora_rx_tdata",
-          "system_ila_0/probe8"
+          "system_ila_0/probe8",
+          "axi_chip2chip_0/axi_c2c_aurora_rx_tdata"
         ]
       },
       "c2c_rx_valid": {
         "ports": [
           "c2c_rx_valid",
-          "axi_chip2chip_0/axi_c2c_aurora_rx_tvalid",
-          "system_ila_0/probe9"
+          "system_ila_0/probe9",
+          "axi_chip2chip_0/axi_c2c_aurora_rx_tvalid"
         ]
       },
       "c2c_rxbufstatus": {
@@ -1977,8 +1977,8 @@
       "fsm_c2c_channel_up": {
         "ports": [
           "c2c_reset_fsm_0/c2c_channel_up",
-          "axi_chip2chip_0/axi_c2c_aurora_channel_up",
-          "system_ila_0/probe4"
+          "system_ila_0/probe4",
+          "axi_chip2chip_0/axi_c2c_aurora_channel_up"
         ]
       },
       "mgt_rx_data_1": {

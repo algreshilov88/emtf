@@ -31,10 +31,10 @@ entity cstlp_rx is
     rxdata_out_c            : out std_logic_vector(LWORD_WIDTH+5 - 1 downto 0);
       
 --  rxMetadata_out        : out linkRxMetadata_t;
-    rxMetadata_out_c        : out std_logic_vector(8+4+5+4+8+8+1-1 downto 0);
+    rxMetadata_out_c        : out std_logic_vector(8+4+8+32-1 downto 0);
     
 --  linkStatusInfo_out    : out linkStatusInfo_t
-    linkStatusInfo_out_c    : out std_logic_vector(8+4+4+4+8+4+1+4+4-1 downto 0)    
+    linkStatusInfo_out_c    : out std_logic_vector(32+16+16+16+32+4+1+16+16+9+9-1 downto 0)    
     );
 end cstlp_rx;
 
@@ -62,11 +62,8 @@ begin
 --  rxMetadata_out        : out linkRxMetadata_t;
     rxMetadata_out_c <=  rxMetadata_out.crate_id      &
                          rxMetadata_out.slot_id       &
-                         rxMetadata_out.tm_interval   &
-                         rxMetadata_out.clk_multiplier&
-                         rxMetadata_out.packet_size   &
                          rxMetadata_out.channel_id    &
-                         rxMetadata_out.IM            ;
+                         rxMetadata_out.link_id_1     ;
     
 --  linkStatusInfo_out    : out linkStatusInfo_t
     linkStatusInfo_out_c <= linkStatusInfo_out.crc_errors             &    
@@ -77,7 +74,9 @@ begin
                             linkStatusInfo_out.special_bits           &
                             linkStatusInfo_out.rx_index_lock_lost     &
                             linkStatusInfo_out.rx_index_lock_lost_cntr&
-                            linkStatusInfo_out.wrong_index_cntr_out   ;
+                            linkStatusInfo_out.wrong_index_cntr_out   &
+                            linkStatusInfo_out.wbuf_add_word_out      &
+                            linkStatusInfo_out.rbuf_add_word_out      ;
 
  rx_path : entity work.rx_datapath
         generic map(

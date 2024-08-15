@@ -35,13 +35,10 @@ typedef union packed
 
 typedef struct packed
 {
-    logic [7 : 0] crate_id       ;
-    logic [3 : 0] slot_id        ;
-    logic [4 : 0] tm_interval    ;
-    logic [3 : 0] clk_multiplier ;
-    logic [7 : 0] packet_size    ;
-    logic [7 : 0] channel_id     ;
-    logic         IM             ;
+    logic [7 : 0]  crate_id       ;
+    logic [3 : 0]  slot_id        ;
+    logic [7 : 0]  channel_id     ;
+    logic [31 : 0] link_id_1      ;
 } linkRxMetadata_t;
 
 typedef union packed
@@ -52,15 +49,17 @@ typedef union packed
 
 typedef struct packed
 {
-    logic [7:0] crc_errors              ;    
-    logic [3:0] hard_errors             ;
-    logic [3:0] cwt_single_errors       ;
-    logic [3:0] cwt_double_errors       ;
-    logic [7:0] packet_cntr             ;
-    logic [3:0] special_bits            ;
-    logic       rx_index_lock_lost      ;
-    logic [3:0] rx_index_lock_lost_cntr ;
-    logic [3:0] wrong_index_cntr_out    ;
+    logic [31:0] crc_errors              ;    
+    logic [15:0] hard_errors             ;
+    logic [15:0] cwt_single_errors       ;
+    logic [15:0] cwt_double_errors       ;
+    logic [31:0] packet_cntr             ;
+    logic [3:0]  special_bits            ;
+    logic        rx_index_lock_lost      ;
+    logic [15:0] rx_index_lock_lost_cntr ;
+    logic [15:0] wrong_index_cntr_out    ;
+    logic [8:0]  wbuf_add_word_out       ;
+    logic [8:0]  rbuf_add_word_out       ;
 } linkStatusInfo_t;
 
 typedef union packed

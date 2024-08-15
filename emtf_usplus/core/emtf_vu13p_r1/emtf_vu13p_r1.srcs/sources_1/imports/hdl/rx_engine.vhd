@@ -30,8 +30,10 @@ entity rx_engine is
     rxMetadata_out           : out linkRxMetadata_t;
     special_bits_out         : out std_logic_vector(3 downto 0);
     index_lock_lost_out      : out std_logic;
-    index_lock_lost_cntr_out : out std_logic_vector(3 downto 0);
-    wrong_index_cntr_out     : out std_logic_vector(3 downto 0);
+    index_lock_lost_cntr_out : out std_logic_vector(15 downto 0);
+    wrong_index_cntr_out     : out std_logic_vector(15 downto 0);
+    wbuf_add_word_out        : out std_logic_vector(8 downto 0);
+    rbuf_add_word_out        : out std_logic_vector(8 downto 0);
     align_tag_out            : out std_logic
     );
 end entity;
@@ -137,6 +139,7 @@ begin
   align_tag_out    <= bram_out_data(66);  
   crc_ttc_word_out <= crc_ttc_word_i;
   special_bits_out <= sb_outdata_i(59 downto 56);
-
-
+  wbuf_add_word_out <= wbuf_add_word_i;
+  rbuf_add_word_out <= rbuf_add_word_i;
+  
 end architecture;

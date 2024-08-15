@@ -33,8 +33,8 @@ entity rxbram_ctrl is
     rxMetadata_out           : out linkRxMetadata_t;
     special_bits_out         : out std_logic_vector(7 downto 0);
     index_lock_lost_out      : out std_logic;
-    index_lock_lost_cntr_out : out std_logic_vector(3 downto 0);
-    wrong_index_cntr_out     : out std_logic_vector(3 downto 0);
+    index_lock_lost_cntr_out : out std_logic_vector(15 downto 0);
+    wrong_index_cntr_out     : out std_logic_vector(15 downto 0);
     wbuf_add_word_out        : out std_logic_vector(8 downto 0);
     rbuf_add_word_out        : out std_logic_vector(8 downto 0)
     );
@@ -48,33 +48,33 @@ architecture RTL of rxbram_ctrl is
   signal wbuf_add : integer range 0 to BRAM_DEPTH-1;
   signal rbuf_add : integer range 0 to BRAM_DEPTH-1;
   
-  signal wr_en_i              : std_logic := '0';
-  signal rd_en_i              : std_logic := '0';
-  signal pad0_flag_i          : std_logic := '0';
-  signal pad1_flag_i          : std_logic := '0';
-  signal link_status_sync     : std_logic := '0';
-  signal tag_marker_i         : std_logic := '0';
-  signal crc_value_i          : std_logic := '0';
-  signal wr_en_p              : std_logic                     := '0';
-  signal buf_ptr_inc          : std_logic                     := '0';
-  signal buf_ptr_dec          : std_logic                     := '0';
-  signal buf_rst_r, buf_rst_w : std_logic                     := '0';
-  signal buf_ptr_cntrl        : std_logic_vector(1 downto 0)  := "00";
-  signal link_id_0            : std_logic_vector(31 downto 0) := (others => '0');
-  signal link_id_1            : std_logic_vector(31 downto 0) := (others => '0');
-  signal link_id_0_frn        : std_logic_vector(31 downto 0) := (others => '0');
-  signal link_id_1_frn        : std_logic_vector(31 downto 0) := (others => '0');
-  signal crc_word_i           : std_logic_vector(16 downto 0) := (others => '0');
-  signal received_index_i     : std_logic_vector(3 downto 0)  := (others => '0');
-  signal index_number         : std_logic_vector(3 downto 0)  := (others => '0');
-  signal received_index_latced: std_logic_vector(3 downto 0)  := (others => '0');
-  signal special_bits_i       : std_logic_vector(7 downto 0)  := (others => '0');
-  signal filler_detected_i    : std_logic := '0';
-  signal index_lock           : std_logic := '0';
-  signal index_corr_dec       : std_logic := '0';
-  signal index_corr_inc       : std_logic := '0';
-  signal locked               : std_logic := '0';
-  signal filler_detected_i1   : std_logic := '0';
+  signal wr_en_i              : std_logic;
+  signal rd_en_i              : std_logic;
+  signal pad0_flag_i          : std_logic;
+  signal pad1_flag_i          : std_logic;
+  signal link_status_sync     : std_logic;
+  signal tag_marker_i         : std_logic;
+  signal crc_value_i          : std_logic;
+  signal wr_en_p              : std_logic;
+  signal buf_ptr_inc          : std_logic;
+  signal buf_ptr_dec          : std_logic;
+  signal buf_rst_r, buf_rst_w : std_logic;
+  signal buf_ptr_cntrl        : std_logic_vector(1 downto 0);
+  signal link_id_0            : std_logic_vector(31 downto 0);
+  signal link_id_1            : std_logic_vector(31 downto 0);
+  signal link_id_0_frn        : std_logic_vector(31 downto 0);
+  signal link_id_1_frn        : std_logic_vector(31 downto 0);
+  signal crc_word_i           : std_logic_vector(16 downto 0);
+  signal received_index_i     : std_logic_vector(3 downto 0);
+  signal index_number         : std_logic_vector(3 downto 0);
+  signal received_index_latced: std_logic_vector(3 downto 0);
+  signal special_bits_i       : std_logic_vector(7 downto 0);
+  signal phase_ahead_i        : std_logic_vector(2 downto 0);
+  signal phase_behind_i       : std_logic_vector(2 downto 0);
+  signal filler_detected_i    : std_logic;
+  signal index_lock           : std_logic;
+  signal locked               : std_logic;
+  signal filler_detected_i1   : std_logic;
 
 
   attribute ASYNC_REG                  : string;
@@ -99,6 +99,13 @@ begin
       rst_out => buf_rst_w
       );
 
+  reset_synchronizer_bufrst_inst : entity work.emp_reset_synchronizer
+    port map(
+      clk_in  => ttc_clk,
+      rst_in  => rxram_pointer_ctrl_in.rst,
+      rst_out => buf_rst_r
+      );
+  
   -- when rx pointer signals are driven by the freerun clock
   ttc_synchs : if TTC_DOMAIN = 0 generate
 
@@ -116,13 +123,6 @@ begin
         o_out  => buf_ptr_dec
         );
 
-    reset_synchronizer_bufrst_inst : entity work.emp_reset_synchronizer
-      port map(
-        clk_in  => ttc_clk,
-        rst_in  => rxram_pointer_ctrl_in.rst,
-        rst_out => buf_rst_r
-        );
-
   end generate ttc_synchs;
 
   -- when rx pointer signals are driven by the ttc clock
@@ -130,7 +130,6 @@ begin
 
     buf_ptr_inc <= rxram_pointer_ctrl_in.ptr_inc;
     buf_ptr_dec <= rxram_pointer_ctrl_in.ptr_dec;
-    buf_rst_r   <= rxram_pointer_ctrl_in.rst;
 
   end generate;
   --============================================================================================================================  
@@ -168,22 +167,18 @@ begin
    
   index_correction: entity work.rx_index_corr
   port map(
-    freerun_clk              => freerun_clk,  
     rxusrclk                 => rxusrclk,         
-    ttc_clk                  => ttc_clk,            
     rst_rx                   => rst_rx,             
-    rst_ttc                  => rst_ttc,              
     rst_latched              => rst_latched,              
     rst_cntr_rx              => rst_cntr_rx,              
     disable_ICM_in           => disable_ICM_in,    
     received_index_in        => received_index_i,    
     filler_detected_in       => filler_detected_i1,   
-    rx_datavalid_in          => rx_datavalid_in,  
     index_lock_lost_out      => index_lock_lost_out,  
     index_lock_lost_cntr_out => index_lock_lost_cntr_out,  
     wrong_index_cntr_out     => wrong_index_cntr_out,  
-    index_corr_inc_out       => index_corr_inc,      
-    index_corr_dec_out       => index_corr_dec
+    phase_ahead_out          => phase_ahead_i,      
+    phase_behind_out         => phase_behind_i
   );       
   --============================================================================================================================  
   
@@ -240,10 +235,7 @@ begin
       rxMetadata_out.channel_id     <= link_id_0(7 downto 0);
       rxMetadata_out.slot_id        <= link_id_0(11 downto 8);
       rxMetadata_out.crate_id       <= link_id_0(19 downto 12);
-      rxMetadata_out.clk_multiplier <= link_id_1(3 downto 0);
-      rxMetadata_out.packet_size    <= link_id_1(11 downto 4);
-      rxMetadata_out.tm_interval    <= link_id_1(16 downto 12);
-      rxMetadata_out.IM             <= link_id_1(17);
+      rxMetadata_out.link_id_1      <= link_id_1;
     end if;
   end process;
   --============================================================================================================================  
@@ -258,7 +250,6 @@ begin
         filler_tag_out <= '0';
       else
         if rx_datavalid_in = '1' and pad0_flag_i = '0' and pad1_flag_i = '0' then
---        if rx_datavalid_in = '1' then
           filler_tag_out <= tag_marker_i;
         end if;
       end if;
@@ -279,14 +270,10 @@ begin
           wbuf_add <= 15;
         else
           if wr_en_i = '0' then
-            -- Padding word.  Do not place in FIFO.
-            wbuf_add <= wbuf_add;
+            -- Filler word.  Do not place in FIFO.
+            wbuf_add <= wbuf_add - to_integer(unsigned(phase_ahead_i)) + to_integer(unsigned(phase_behind_i)) ;
           else
-            if wbuf_add < BRAM_DEPTH-1 then
-              wbuf_add <= wbuf_add + 1;
-            else
-              wbuf_add <= 0;
-            end if;
+            wbuf_add <= wbuf_add - to_integer(unsigned(phase_ahead_i)) + to_integer(unsigned(phase_behind_i)) + 1;
           end if;
         end if;
       end if;
@@ -294,7 +281,7 @@ begin
   end process wbuf_sm;
 
 
-  buf_ptr_cntrl <= (buf_ptr_inc or index_corr_inc) & (buf_ptr_dec or index_corr_dec);
+  buf_ptr_cntrl <= buf_ptr_inc & buf_ptr_dec;
 
   rbuf_sm : process (ttc_clk)
   begin

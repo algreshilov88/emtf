@@ -180,7 +180,7 @@
         "OUTPUTDIR": [ { "value": "../../../../../../emtf_vu13p_r1.gen/sources_1/bd/apex_blk/ip/apex_blk_axi_bram_ctrl_0_bram_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
-        "SWVERSION": [ { "value": "2022.2.2" } ],
+        "SWVERSION": [ { "value": "2022.2" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },
